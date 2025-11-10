@@ -83,15 +83,15 @@ export default function Contact() {
             <div className="space-y-3 text-gray-700">
               <div className="flex items-center justify-center gap-3">
                 <span className="text-blue-600 text-xl">📞</span>
-                <p>+977 9812345678</p>
+                <p>+977 9800000000</p>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <span className="text-blue-600 text-xl">📧</span>
-                <p>support@hospitalcare.com</p>
+                <p>support@hospital.com</p>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <span className="text-blue-600 text-xl">📍</span>
-                <p>Putalisadak, Kathmandu, Nepal</p>
+                <p> Kathmandu, Nepal</p>
               </div>
             </div>
 
