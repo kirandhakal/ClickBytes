@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-zinc-50 font-sans dark:bg-black mt-24">
+    <div className="flex flex-col  bg-zinc-50 font-sans dark:bg-black mt-0">
       {/* Hero Section */}
       <section className="relative bg-blue-400 text-white py-32 px-6 text-center flex flex-col items-center justify-center">
         <motion.h1

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import Footer from './Footer'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,7 +34,7 @@ export default function Navbar() {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
-
+ <Footer />
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 flex flex-col space-y-2 py-4 px-6">
@@ -47,5 +48,6 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+   
   )
 }
