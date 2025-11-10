@@ -62,7 +62,9 @@ export default function UserPage() {
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
+       
       <h1 className="text-4xl font-bold text-blue-700 mb-8">User Dashboard</h1>
+    
 
       {/* User Info */}
       <motion.div
@@ -99,11 +101,17 @@ export default function UserPage() {
 
         {/* Book Appointment Button */}
         <button
-          className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition text-lg font-semibold mt-4"
+          className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition text-lg font-semibold mt-4 "
           onClick={() => setShowModal(true)}
         >
           Book Appointment
         </button>
+        <button
+            className="bg-gray-600 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition mx-4"
+            onClick={() => window.location.href = '/'}
+          >
+            ← Back to Home
+          </button>
       </motion.div>
 
       {/* Appointments List */}

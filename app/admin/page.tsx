@@ -97,9 +97,18 @@ export default function AdminUserPage() {
     )
   }
 
-  return (
+ 
+   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold text-blue-700 mb-6">Admin – User List</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-3xl font-bold text-blue-700">Admin – User List</h1>
+        <button
+          className="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition"
+          onClick={() => window.location.href = '/'}
+        >
+          ← Back to Home
+        </button>
+      </div>
 
       {/* Add New User Button */}
       <button

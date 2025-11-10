@@ -1,3 +1,5 @@
+'use client'
+
 export default function Doctor() {
   const data = [
     { col1: "Dr. John Doe", col2: "Cardiologist", col3: "Available" },
@@ -8,9 +10,17 @@ export default function Doctor() {
   return (
     <>
       <section className="p-8 bg-gray-50 min-h-screen">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-          Doctor List
-        </h1>
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-3xl font-bold text-gray-800">
+            Doctor List
+          </h1>
+          <button
+            className="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition"
+            onClick={() => window.location.href = '/'}
+          >
+            ← Back to Home
+          </button>
+        </div>
 
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-300 rounded-xl overflow-hidden">
