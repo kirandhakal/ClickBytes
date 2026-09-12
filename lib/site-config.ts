@@ -25,4 +25,5 @@ export const navigation = [
   { label: "Motion", href: "/#motion" },
   { label: "Blog", href: "/blogs" },
   { label: "Case studies", href: "/case-studies" },
+  { label: "Patterns", href: "/patterns" },
 ] as const;

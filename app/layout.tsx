@@ -4,6 +4,7 @@ import { SchemaOrg } from "@/components/schema-org";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/context/theme-context";
+import { ToastProvider } from "@/components/ui/overlays";
 import { createMetadata } from "@/lib/metadata";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
@@ -40,9 +41,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
       <body className="min-h-dvh antialiased">
         <ThemeProvider>
-          <SiteHeader />
-          <main>{children}</main>
-          <SiteFooter />
+          <ToastProvider>
+            <SiteHeader />
+            <main>{children}</main>
+            <SiteFooter />
+          </ToastProvider>
         </ThemeProvider>
         <SchemaOrg data={[organizationSchema(), websiteSchema()]} />
       </body>

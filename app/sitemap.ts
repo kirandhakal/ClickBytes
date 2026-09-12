@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { url: absoluteUrl("/blogs"), lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/case-studies"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: absoluteUrl("/patterns"), lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = getAllBlogPosts().map((post) => ({
