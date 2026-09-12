@@ -1,0 +1,10 @@
+{
+  "eyebrow": "Frontend foundation",
+  "title": "A serious starting point, without the project archaeology.",
+  "description": "A reusable App Router structure with design tokens, accessible components, restrained motion, dark mode, and SEO defaults ready for real content.",
+  "stats": [
+    { "value": "14", "label": "primitives" },
+    { "value": "2", "label": "themes" },
+    { "value": "100%", "label": "typed" }
+  ]
+}
