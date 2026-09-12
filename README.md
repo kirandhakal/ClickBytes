@@ -40,6 +40,7 @@ The starter includes complete list/detail flows backed by dummy JSON:
 
 - `/blogs` and `/blogs/view-details/[slug]`
 - `/case-studies` and `/case-studies/view-details/[slug]`
+- `/patterns` — interactive component and interaction lab
 
 Each detail route demonstrates `generateStaticParams`, async params, dynamic metadata, `notFound()`, breadcrumbs, JSON-LD, and sitemap generation. Replace the JSON-backed helpers in `lib/fetchers` with a CMS or API without changing page composition.
 
@@ -68,6 +69,8 @@ Animations are CSS-first and respect `prefers-reduced-motion`. Available directi
 ## Feedback primitives
 
 `components/ui` includes alerts for info, success, warning, and failure states, plus `Spinner`, `Progress`, `Skeleton`, and `EmptyState` components.
+
+The same barrel also exports navigation (`MegaMenu`, `SidebarNav`, `DrawerPanel`, `Pagination`, `Stepper`, `DropdownMenu`, `ContextMenu`, `Tooltip`, `Popover`), overlays (`Modal`, `PreviewModal`, `Drawer`, `ConfirmationDialog`, `ToastProvider`), display patterns (`Table`, `Accordion`, `Carousel`, `Avatar`, `Timeline`, `Stat`, `ProgressCircle`), and advanced controls (`SearchBar`, `OtpInput`, `FileDropzone`, `DateTimeInput`, `CalendarView`, `KanbanBoard`, `CommandPalette`, `CookieConsent`, `ChatWidget`, `BackToTop`).
 
 ## Project checklist
 

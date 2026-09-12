@@ -1,4 +1,6 @@
 "use client";
+/* Upload previews are local blob URLs and intentionally bypass Next Image optimization. */
+/* eslint-disable @next/next/no-img-element */
 
 import * as React from "react";
 import { Search, Upload, X } from "lucide-react";

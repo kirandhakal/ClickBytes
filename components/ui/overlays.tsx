@@ -1,4 +1,6 @@
 "use client";
+/* PreviewModal accepts local blob/data URLs as well as regular image URLs. */
+/* eslint-disable @next/next/no-img-element */
 
 import * as React from "react";
 import { Check, X } from "lucide-react";

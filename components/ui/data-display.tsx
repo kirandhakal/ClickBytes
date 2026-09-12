@@ -1,4 +1,6 @@
 "use client";
+/* Dynamic avatar sources may be blob/data URLs; Next Image cannot optimize them. */
+/* eslint-disable @next/next/no-img-element */
 
 import * as React from "react";
 import { ChevronDown, ChevronLeft, ChevronRight, Star } from "lucide-react";
