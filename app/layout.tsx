@@ -10,8 +10,8 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   ...createMetadata(),
+  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.creator }],
   creator: siteConfig.creator,
