@@ -34,6 +34,41 @@ npx shadcn@latest add dialog dropdown-menu form
 
 Existing primitives are intentionally local and may be edited directly.
 
+## Dynamic route examples
+
+The starter includes complete list/detail flows backed by dummy JSON:
+
+- `/blogs` and `/blogs/view-details/[slug]`
+- `/case-studies` and `/case-studies/view-details/[slug]`
+
+Each detail route demonstrates `generateStaticParams`, async params, dynamic metadata, `notFound()`, breadcrumbs, JSON-LD, and sitemap generation. Replace the JSON-backed helpers in `lib/fetchers` with a CMS or API without changing page composition.
+
+## Motion primitives
+
+Import animation wrappers from one entry point:
+
+```tsx
+import {
+  BlurIn,
+  FadeIn,
+  HoverLift,
+  ScaleIn,
+  SlideIn,
+  Stagger,
+  StaggerItem,
+} from "@/components/motion";
+
+<SlideIn direction="up" delay={120}>
+  <YourSection />
+</SlideIn>
+```
+
+Animations are CSS-first and respect `prefers-reduced-motion`. Available directional values are `up`, `down`, `left`, and `right`.
+
+## Feedback primitives
+
+`components/ui` includes alerts for info, success, warning, and failure states, plus `Spinner`, `Progress`, `Skeleton`, and `EmptyState` components.
+
 ## Project checklist
 
 1. Set `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_SITE_NAME`.

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Blocks } from "lucide-react";
+import { Blocks, Menu } from "lucide-react";
 import { navigation, siteConfig } from "@/lib/site-config";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -20,7 +20,18 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <ThemeToggle />
+        <div className="flex items-center gap-1">
+          <details className="group relative md:hidden">
+            <summary className="grid size-10 cursor-pointer list-none place-items-center rounded-md outline-none hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring [&::-webkit-details-marker]:hidden">
+              <Menu className="size-4" aria-hidden="true" />
+              <span className="sr-only">Open navigation</span>
+            </summary>
+            <nav aria-label="Mobile navigation" className="absolute right-0 top-12 z-50 grid w-48 gap-1 rounded-lg border bg-background p-2 shadow-lg">
+              {navigation.map((item) => <Link key={item.href} href={item.href} className="rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">{item.label}</Link>)}
+            </nav>
+          </details>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
