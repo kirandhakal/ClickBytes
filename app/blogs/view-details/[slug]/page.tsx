@@ -12,6 +12,8 @@ import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllBlogPosts().map(({ slug }) => ({ slug }));
 }

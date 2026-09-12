@@ -11,6 +11,8 @@ import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllCaseStudies().map(({ slug }) => ({ slug }));
 }
