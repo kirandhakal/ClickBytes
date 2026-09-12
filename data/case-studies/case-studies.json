@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "commerce-checkout-redesign",
+    "title": "A clearer checkout for a growing retailer",
+    "summary": "We simplified a crowded purchase flow into a fast, accessible checkout that works across devices.",
+    "industry": "Commerce",
+    "service": "Product design and frontend",
+    "challenge": "Customers were abandoning checkout after encountering unclear delivery choices, late validation, and a mobile layout that shifted as totals updated.",
+    "solution": "The flow was rebuilt around stable responsive regions, inline validation, explicit delivery states, and reusable form primitives shared with the account area.",
+    "outcome": "The new experience reduced hesitation and gave the internal team a maintainable component model for future checkout experiments.",
+    "metrics": [
+      { "value": "28%", "label": "fewer abandoned carts" },
+      { "value": "1.4s", "label": "faster interaction time" },
+      { "value": "AA", "label": "accessibility target" }
+    ]
+  },
+  {
+    "slug": "operations-dashboard-foundation",
+    "title": "A dependable operations dashboard foundation",
+    "summary": "A reusable information system helped an operations team scan, filter, and act on live work more quickly.",
+    "industry": "Logistics",
+    "service": "Design system and application UI",
+    "challenge": "Critical status information was spread across dense screens with inconsistent controls, making repeated daily work slower and more error-prone.",
+    "solution": "We defined semantic status tokens, predictable table actions, reusable empty and loading states, and a responsive navigation pattern optimized for repeated use.",
+    "outcome": "Teams gained a coherent interface vocabulary, while engineers could build new operational views from tested primitives instead of starting over.",
+    "metrics": [
+      { "value": "35%", "label": "faster task completion" },
+      { "value": "12", "label": "shared workflows" },
+      { "value": "40%", "label": "less UI duplication" }
+    ]
+  }
+]

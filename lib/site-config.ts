@@ -20,8 +20,9 @@ export const siteConfig = {
 } as const;
 
 export const navigation = [
-  { label: "Foundation", href: "#foundation" },
-  { label: "Components", href: "#components" },
-  { label: "Forms", href: "#forms" },
-  { label: "Motion", href: "#motion" },
+  { label: "Components", href: "/#components" },
+  { label: "States", href: "/#states" },
+  { label: "Motion", href: "/#motion" },
+  { label: "Blog", href: "/blogs" },
+  { label: "Case studies", href: "/case-studies" },
 ] as const;

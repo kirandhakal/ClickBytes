@@ -13,7 +13,8 @@ import {
 } from "lucide-react";
 import foundations from "@/data/showcase/foundations.json";
 import type { ShowcaseData } from "@/types/showcase";
-import { Reveal } from "@/components/motion/reveal";
+import { BlurIn, FadeIn, HoverLift, Reveal, ScaleIn, SlideIn, Stagger, StaggerItem } from "@/components/motion";
+import { FeedbackShowcase } from "@/features/Showcase/feedback-showcase";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -161,6 +162,8 @@ export function ComponentShowcase() {
         </div>
       </section>
 
+      <FeedbackShowcase />
+
       <section id="forms" className="py-16 sm:py-20">
         <div className="container">
           <SectionHeading eyebrow="Forms" title="Form controls with complete states" description="Labels, descriptions, error messaging, focus rings, and disabled behavior are visible from day one." />
@@ -180,15 +183,14 @@ export function ComponentShowcase() {
       <section id="motion" className="border-t bg-foreground py-16 text-background sm:py-20">
         <div className="container">
           <SectionHeading eyebrow="Motion" title="Quiet animation with a purpose" description="Motion is CSS-first, opt-in, and automatically disabled when a visitor prefers reduced motion." />
-          <div className="grid gap-4 sm:grid-cols-3">
-            {["Reveal on entry", "Responsive hover", "Calm feedback"].map((label, index) => (
-              <Reveal key={label} delay={index * 100} className="motion-demo rounded-lg border border-background/20 p-5">
-                <span className="mb-8 block size-8 rounded-md bg-accent" />
-                <p className="font-semibold">{label}</p>
-                <p className="mt-1 text-sm text-background/65">Small, clear, and never in the way.</p>
-              </Reveal>
-            ))}
-          </div>
+          <Stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <StaggerItem><HoverLift className="motion-demo rounded-lg border border-background/20 p-5"><FadeIn><span className="mb-8 block size-8 rounded-md bg-accent" /><p className="font-semibold">Fade in</p><p className="mt-1 text-sm text-background/65">A subtle opacity transition.</p></FadeIn></HoverLift></StaggerItem>
+            <StaggerItem><HoverLift className="motion-demo rounded-lg border border-background/20 p-5"><SlideIn direction="up"><span className="mb-8 block size-8 rounded-md bg-accent" /><p className="font-semibold">Slide in</p><p className="mt-1 text-sm text-background/65">Choose up, down, left, or right.</p></SlideIn></HoverLift></StaggerItem>
+            <StaggerItem><HoverLift className="motion-demo rounded-lg border border-background/20 p-5"><ScaleIn><span className="mb-8 block size-8 rounded-md bg-accent" /><p className="font-semibold">Scale in</p><p className="mt-1 text-sm text-background/65">Useful for dialogs and confirmations.</p></ScaleIn></HoverLift></StaggerItem>
+            <StaggerItem><HoverLift className="motion-demo rounded-lg border border-background/20 p-5"><BlurIn><span className="mb-8 block size-8 rounded-md bg-accent" /><p className="font-semibold">Blur in</p><p className="mt-1 text-sm text-background/65">A soft entrance for supporting content.</p></BlurIn></HoverLift></StaggerItem>
+            <StaggerItem><HoverLift className="motion-demo rounded-lg border border-background/20 p-5"><SlideIn direction="left"><span className="mb-8 block size-8 rounded-md bg-accent" /><p className="font-semibold">Directional</p><p className="mt-1 text-sm text-background/65">Match movement to spatial context.</p></SlideIn></HoverLift></StaggerItem>
+            <StaggerItem><HoverLift className="motion-demo rounded-lg border border-background/20 p-5"><Reveal><span className="mb-8 block size-8 rounded-md bg-accent" /><p className="font-semibold">Hover lift</p><p className="mt-1 text-sm text-background/65">Quiet feedback for interactive surfaces.</p></Reveal></HoverLift></StaggerItem>
+          </Stagger>
         </div>
       </section>
     </>

@@ -105,8 +105,38 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 .motion-demo span { transition: transform 250ms ease; }
 .motion-demo:hover span { transform: rotate(8deg) scale(1.08); }
 
+.motion-enter { animation-fill-mode: both; animation-timing-function: ease; }
+.motion-fade { animation-name: motion-fade; }
+.motion-slide-up { animation-name: motion-slide-up; }
+.motion-slide-down { animation-name: motion-slide-down; }
+.motion-slide-left { animation-name: motion-slide-left; }
+.motion-slide-right { animation-name: motion-slide-right; }
+.motion-scale { animation-name: motion-scale; }
+.motion-blur { animation-name: motion-blur; }
+.motion-hover-lift { transition: transform 200ms ease, box-shadow 200ms ease; }
+.motion-hover-lift:hover { transform: translateY(-4px); }
+
+.motion-stagger-item { animation: motion-slide-up 500ms ease both; }
+.motion-stagger-item:nth-child(2) { animation-delay: 80ms; }
+.motion-stagger-item:nth-child(3) { animation-delay: 160ms; }
+.motion-stagger-item:nth-child(4) { animation-delay: 240ms; }
+.motion-stagger-item:nth-child(5) { animation-delay: 320ms; }
+.motion-stagger-item:nth-child(6) { animation-delay: 400ms; }
+.motion-stagger-item:nth-child(7) { animation-delay: 480ms; }
+.motion-stagger-item:nth-child(8) { animation-delay: 560ms; }
+
+@keyframes motion-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes motion-slide-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes motion-slide-down { from { opacity: 0; transform: translateY(-18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes motion-slide-left { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes motion-slide-right { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes motion-scale { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+@keyframes motion-blur { from { opacity: 0; filter: blur(8px); } to { opacity: 1; filter: blur(0); } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
   .motion-reveal { opacity: 1; transform: none; }
+  .motion-enter, .motion-stagger-item { opacity: 1; filter: none; transform: none; }
+  .motion-hover-lift:hover { transform: none; }
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "designing-a-scalable-frontend",
+    "title": "Designing a frontend that can grow",
+    "excerpt": "A practical way to separate routes, features, shared components, and content before a project becomes difficult to change.",
+    "category": "Architecture",
+    "publishedAt": "2026-08-18",
+    "readingTime": "6 min read",
+    "author": "Starter Team",
+    "content": [
+      "A scalable frontend is less about having many folders and more about giving each kind of code a predictable home. Routes should describe URLs and compose screens. Features should own domain-specific sections, while shared components stay unaware of individual pages.",
+      "Keeping content in typed data files is useful for prototypes and content-driven sites. It gives teams a CMS-like boundary without introducing infrastructure too early, and the same types can later describe API responses.",
+      "The best starter is intentionally ordinary. It establishes accessibility, responsive layout, metadata, and error states once, then stays out of the way as the product develops."
+    ]
+  },
+  {
+    "slug": "seo-with-the-app-router",
+    "title": "Practical SEO with the App Router",
+    "excerpt": "Build canonical metadata, social previews, structured data, robots rules, and sitemaps into the project foundation.",
+    "category": "SEO",
+    "publishedAt": "2026-08-27",
+    "readingTime": "5 min read",
+    "author": "Starter Team",
+    "content": [
+      "SEO works best as part of route composition instead of a final checklist. Static pages can export metadata directly, while dynamic routes can create metadata from the same record used to render the page.",
+      "Canonical URLs prevent ambiguity, Open Graph metadata improves link previews, and structured data gives crawlers explicit information about the page. Each one solves a different problem, so a complete starter includes all three.",
+      "Sitemaps should be generated from the same source as route params. This prevents published detail pages from quietly disappearing from discovery when content changes."
+    ]
+  },
+  {
+    "slug": "motion-with-restraint",
+    "title": "Using motion with restraint",
+    "excerpt": "Small animation primitives can improve hierarchy and feedback without turning a product interface into a presentation.",
+    "category": "Interaction",
+    "publishedAt": "2026-09-04",
+    "readingTime": "4 min read",
+    "author": "Starter Team",
+    "content": [
+      "Interface motion should clarify what changed, where an element came from, or whether an action succeeded. When animation has no communicative purpose, it quickly becomes visual noise.",
+      "A small set of fade, slide, scale, stagger, and hover primitives covers most product needs. Keeping these effects local makes them easy to replace and keeps feature components readable.",
+      "Reduced-motion support is not an optional enhancement. Animation utilities should respect the system preference automatically so every feature gets the correct behavior by default."
+    ]
+  }
+]
