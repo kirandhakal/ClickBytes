@@ -23,7 +23,7 @@ export function createMetadata({
   const canonical = absoluteUrl(path);
 
   return {
-    title,
+    ...(title ? { title } : {}),
     description,
     keywords: [...siteConfig.keywords],
     alternates: { canonical },
