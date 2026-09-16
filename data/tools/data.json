@@ -1,0 +1,40 @@
+{
+  "eyebrow": "08 / QA tools",
+  "title": "Test-case builder",
+  "description": "Turn a testing idea into a repeatable manual test case. Fill in the context, add steps, and copy or download a Markdown document. Your inputs stay in this tab; refreshing clears them.",
+  "sections": [],
+  "links": [],
+  "fields": {
+    "id": "Test case ID",
+    "title": "Scenario title",
+    "preconditions": "Preconditions",
+    "steps": "Steps — one per line",
+    "expected": "Expected result",
+    "priority": "Priority"
+  },
+  "priorities": [
+    "High",
+    "Medium",
+    "Low"
+  ],
+  "preview": "Live preview",
+  "copy": "Copy Markdown",
+  "download": "Download .md",
+  "reset": "Clear form",
+  "sample": "Load example",
+  "copied": "Copied to clipboard.",
+  "copyError": "Clipboard unavailable. Use Download .md instead.",
+  "invalid": "Add a scenario title, at least one step, and an expected result.",
+  "downloaded": "Markdown downloaded.",
+  "cleared": "Form cleared.",
+  "loaded": "Example loaded.",
+  "empty": "Your test case preview appears here.",
+  "sampleValues": {
+    "id": "TC-001",
+    "title": "Required enrollment field is missing",
+    "preconditions": "Open a synthetic enrollment form with a required email field.",
+    "steps": "Fill all other required fields with valid test data.\nLeave email empty.\nSubmit the form.",
+    "expected": "Submission is rejected. The email field shows a clear validation message, and no application is created.",
+    "priority": "High"
+  }
+}

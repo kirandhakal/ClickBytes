@@ -1,0 +1,67 @@
+{
+  "eyebrow": "Developer → Software quality assurance",
+  "title": "I test software",
+  "accent": "like someone who built it.",
+  "description": "I’m Kiran Dhakal, a computer engineer in Kathmandu bringing 2+ years of full-stack development experience into a career in software quality assurance.",
+  "primary": {
+    "label": "Explore my work",
+    "href": "/work"
+  },
+  "secondary": {
+    "label": "View development CV",
+    "href": "/images/assets/cv.html"
+  },
+  "portrait": {
+    "src": "/images/assets/kirandhakal.webp",
+    "alt": "Kiran Dhakal",
+    "label": "KIRAN DHAKAL / QA PORTFOLIO",
+    "file": "candidate_profile.qa",
+    "status": "OPEN TO QA ROLES",
+    "caption": "Developer insight. Testing curiosity.",
+    "detail": "From building workflows to examining their edge cases."
+  },
+  "directoryTitle": "Explore the portfolio",
+  "directoryDescription": "The background, thinking, and practical exercises behind my transition into QA.",
+  "pages": [
+    {
+      "title": "About",
+      "description": "I’m Kiran Dhakal, a computer engineer in Kathmandu transitioning from full-stack development into software quality assurance.",
+      "href": "/about"
+    },
+    {
+      "title": "Skills",
+      "description": "My engineering foundation supports a transition into manual testing, test design, API validation, and defect investigation.",
+      "href": "/skills"
+    },
+    {
+      "title": "Work",
+      "description": "Development contributions drawn from my CV, with the testing questions each product motivates.",
+      "href": "/work"
+    },
+    {
+      "title": "Process",
+      "description": "My proposed process for identifying risk, designing coverage, and communicating what a release still needs.",
+      "href": "/process"
+    },
+    {
+      "title": "Contact",
+      "description": "I’m exploring SQA opportunities where curiosity, communication, and engineering context help a team deliver reliable software.",
+      "href": "/contact"
+    },
+    {
+      "title": "QA blog",
+      "description": "Original QA articles inspired by systems in my development CV. These are proposed methods and illustrative examples, not reports of verified production defects.",
+      "href": "/blogs"
+    },
+    {
+      "title": "Case studies",
+      "description": "Test-design studies grounded in my development contributions. Scenarios and release criteria are proposed; no test executions or measured improvements are claimed.",
+      "href": "/case-studies"
+    },
+    {
+      "title": "QA tools",
+      "description": "Create a structured test case and export it as Markdown.",
+      "href": "/tools"
+    }
+  ]
+}
