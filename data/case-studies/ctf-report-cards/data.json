@@ -1,0 +1,47 @@
+{
+  "slug": "ctf-report-cards",
+  "title": "CTF School Management: validating grades, ranks, and printable reports",
+  "summary": "A QA study for calculated academic data, attendance summaries, rankings, and transcript output.",
+  "industry": "Education",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "CTF School Management includes automatic report card generation, subject-wise marks, grades, ranks, attendance summaries, and printable transcripts. The public CTF site also shows education content, forms, news, notices, and program pages, which adds public-content QA context."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "A report card error can affect trust quickly. The proposed scope validates calculated values against source records, checks ranking ties, verifies absent or missing marks, and inspects print layout across common page sizes."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Compare grade and rank calculation with an independent spreadsheet oracle.",
+        "Test tied scores, missing attendance, absent marks, and late score updates.",
+        "Generate reports for one student, one class, and a mixed data set.",
+        "Print and export transcripts at desktop and mobile widths.",
+        "Confirm release regression after updating grading rules."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include input marks, attendance values, expected result, generated result, and print preview. Release should not proceed with unresolved grade, rank, or transcript layout failures."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "CTF Nepal",
+      "href": "https://ctfnepal.com/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "pms-rbac-sprints",
+  "title": "PMS SaaS Tool: testing RBAC, real-time sprint updates, and collaboration",
+  "summary": "A QA study for project access control, role permissions, sprint tracking, real-time sync, and workflow consistency.",
+  "industry": "Project management SaaS",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "PMS SaaS Tool is listed as a collaborative tool with role-based access control and real-time sprint tracking. This study focuses on permission boundaries, shared state, status changes, and collaboration reliability."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "The highest risks are unauthorized project access, stale sprint status, conflicting edits, and unclear ownership. The proposed scope uses admin, manager, developer, and viewer accounts across the same project board."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Attempt admin-only actions from lower roles and verify rejection in UI and API.",
+        "Move a task between sprint states from two browser sessions and inspect conflict handling.",
+        "Remove a user from a project and verify immediate access change.",
+        "Create sprint reports after status updates and compare counts.",
+        "Test offline or delayed network behavior for real-time updates."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include account role, project ID, task ID, before/after status, API response, and second-client observation. Release should block permission leaks, lost tasks, and contradictory sprint counts."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "PMS SaaS Tool",
+      "href": "https://pms.dhakalkiran.com.np/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

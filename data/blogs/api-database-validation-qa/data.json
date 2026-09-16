@@ -1,0 +1,47 @@
+{
+  "slug": "api-database-validation-qa",
+  "title": "API and database validation for QA engineers",
+  "excerpt": "A general QA article about checking request rules, response codes, permissions, persisted data, and regression risk.",
+  "category": "API QA",
+  "publishedAt": "2026-09-16",
+  "readingTime": "4 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Why UI testing is not enough",
+      "paragraphs": [
+        "A user interface can hide a button, but the API still needs to reject unauthorized actions. For workflow systems, CMS tools, POS systems, and dashboards, QA should check the API behavior behind critical user actions.",
+        "I use API validation to confirm response status, permissions, required fields, error messages, and saved data."
+      ]
+    },
+    {
+      "title": "Useful API checks",
+      "items": [
+        "Authorized user can complete the intended action.",
+        "Unauthorized user receives a safe rejection.",
+        "Missing or invalid fields return clear validation errors.",
+        "Repeated requests do not create duplicate records.",
+        "Response data matches the latest persisted state."
+      ]
+    },
+    {
+      "title": "Database validation mindset",
+      "paragraphs": [
+        "When access is allowed, database checks can confirm whether the saved record matches the UI and API. This is useful for report cards, POS totals, booking records, CMS content, and workflow audit trails.",
+        "The database should not be used to excuse a broken UI. It is one more observation that helps locate the failure."
+      ]
+    },
+    {
+      "title": "Good evidence",
+      "paragraphs": [
+        "A useful API defect report includes endpoint or operation name, request body, response status, response body, user role, record ID, and expected rule. Tokens and private data should be redacted before sharing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

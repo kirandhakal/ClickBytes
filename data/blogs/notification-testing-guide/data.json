@@ -1,0 +1,50 @@
+{
+  "slug": "notification-testing-guide",
+  "title": "Testing notifications without losing trust",
+  "excerpt": "A general QA guide for targeted alerts, schedule rules, duplicate prevention, delivery evidence, and user-visible message quality.",
+  "category": "Workflow QA",
+  "publishedAt": "2026-09-16",
+  "readingTime": "3 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Notifications are product behavior",
+      "paragraphs": [
+        "Notifications are not decoration. They tell users what happened, what changed, and what they need to do next. A wrong notification can confuse users even when the main feature works.",
+        "Projects with citizen updates, farmer announcements, appointments, workflow decisions, and POS events all need clear notification QA."
+      ]
+    },
+    {
+      "title": "Core scenarios",
+      "items": [
+        "Correct event creates the expected notification.",
+        "Wrong role or audience does not receive the message.",
+        "Scheduled messages respect time, edits, and cancellation.",
+        "Repeated actions do not create duplicate alerts.",
+        "Message content includes the right reference and next step."
+      ]
+    },
+    {
+      "title": "Check timing and targeting",
+      "paragraphs": [
+        "A notification test should record who triggered it, who should receive it, when it should arrive, and what text should appear. For scheduled messages, test edit and cancel behavior before the send time."
+      ]
+    },
+    {
+      "title": "Release evidence",
+      "paragraphs": [
+        "Evidence should include source event ID, recipient role, scheduled time, delivered time, channel, and screenshot or log reference. Release should block wrong-recipient delivery, duplicate alerts, and messages that point users to the wrong action."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Connect Kisan",
+      "href": "https://connectkisan.com/en"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

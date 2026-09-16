@@ -1,0 +1,47 @@
+{
+  "slug": "chiurika-cms",
+  "title": "Chiurika: testing CMS content, storefront UI, and responsive publishing",
+  "summary": "A QA study for homepage content, banners, collections, product data, GraphQL responses, and responsive layout.",
+  "industry": "Ecommerce CMS",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Chiurika includes CMS-driven homepage content, banners, collections, promotional sections, featured products, GraphQL content fetching, and responsive storefront behavior. That makes it useful for testing both content administration and customer-facing UI."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "The key risks are incorrect product display, broken promotional content, stale cached data, slow content loading, and layout issues across screen sizes. The proposed scope compares CMS input, API response, and rendered page output."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Create, update, hide, and reorder homepage banners; verify public rendering.",
+        "Publish a collection with missing image, long title, sale label, and empty product state.",
+        "Validate GraphQL response fields against the displayed UI content.",
+        "Resize from mobile to desktop and inspect cards, banner crop, and call-to-action placement.",
+        "Check loading, empty, and failed API states for content sections."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should link CMS entry, API response, page URL, viewport size, and screenshot. Release criteria should block incorrect product details, unreadable mobile layouts, and content that cannot be safely unpublished."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Chiurika",
+      "href": "https://chiurika.com/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

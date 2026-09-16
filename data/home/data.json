@@ -60,12 +60,12 @@
     },
     {
       "title": "QA blog",
-      "description": "Original QA articles about municipal workflows, enrollment forms, and POS testing.",
+      "description": "General QA writing plus project-based notes about UI/UX, animation testing, APIs, notifications, forms, workflows, and POS testing.",
       "href": "/blogs"
     },
     {
       "title": "Case studies",
-      "description": "QA case studies covering workflows, forms, POS orders, data integrity, and release criteria.",
+      "description": "QA case studies from CV projects, including UI/UX animations, CMS, notifications, bookings, RBAC, recommendations, workflows, and data integrity.",
       "href": "/case-studies"
     },
     {

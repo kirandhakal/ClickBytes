@@ -1,0 +1,51 @@
+{
+  "slug": "ui-ux-animation-testing",
+  "title": "How I test UI/UX, animation, and motion-heavy websites",
+  "excerpt": "A general QA guide for visual polish, responsive behavior, scroll animation, 3D sections, reduced motion, and cross-browser checks.",
+  "category": "UI/UX QA",
+  "publishedAt": "2026-09-16",
+  "readingTime": "4 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Start with the user journey, not the animation library",
+      "paragraphs": [
+        "A polished website can still fail if motion hides important content, interrupts reading, or behaves differently across devices. I start UI/UX testing by identifying the goal of each page: what the user must read, click, understand, or trust.",
+        "For a motion-heavy site like an interactive company website, I would test scroll speed, keyboard navigation, touch gestures, resize behavior, and content visibility before judging visual effects."
+      ]
+    },
+    {
+      "title": "What I check in animation QA",
+      "items": [
+        "Text does not overlap during entrance, exit, hover, or scroll states.",
+        "Animated sections remain usable when the user scrolls quickly.",
+        "3D or canvas content loads, frames correctly, and has fallback behavior.",
+        "Reduced-motion settings still allow the user to reach all content.",
+        "Animation does not block buttons, forms, navigation, or focus states."
+      ]
+    },
+    {
+      "title": "Responsive and cross-browser coverage",
+      "paragraphs": [
+        "I compare mobile, tablet, laptop, and wide desktop layouts. On each viewport I check spacing, readable font sizes, touch target size, image cropping, sticky headers, and footer behavior.",
+        "Cross-browser checks should include Chrome, Firefox, Safari, and Edge when possible. The evidence should name the browser, device size, scroll position, and exact visual problem."
+      ]
+    },
+    {
+      "title": "Release evidence",
+      "paragraphs": [
+        "For UI/UX QA, useful release evidence includes screenshots, short videos, viewport dimensions, browser versions, performance notes, and reduced-motion observations. A vague report like 'animation broken' is weak; a report with timing, screen size, and expected behavior is actionable."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Dwarika Engineering",
+      "href": "https://dwarikaengineering.com/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

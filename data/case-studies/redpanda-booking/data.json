@@ -1,0 +1,47 @@
+{
+  "slug": "redpanda-booking",
+  "title": "Redpanda Hotel: testing booking, checkout, and form recovery",
+  "summary": "A QA study for reservation forms, room availability, checkout rules, validation, and payment-ready flows.",
+  "industry": "Hospitality",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Redpanda Hotel is listed as a hospitality platform with room reservation and custom checkout flows. This study focuses on booking correctness, date validation, user input recovery, and checkout confidence."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "Booking flows are sensitive to dates, availability, pricing, guest details, and interrupted checkout. The proposed scope uses synthetic rooms, seasonal rates, valid and invalid date ranges, and repeat submission tests."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Select checkout before check-in and expect clear validation.",
+        "Reserve the last available room from two sessions and confirm duplicate protection.",
+        "Refresh during checkout and verify the user can recover without losing critical data.",
+        "Use long names, special characters, and empty required fields.",
+        "Compare listed price, checkout summary, and final confirmation."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include room ID, date range, rate source, checkout summary, validation messages, and final booking state. Release should block duplicate reservations, incorrect totals, and unclear failed checkout states."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Redpanda Hotel",
+      "href": "https://pandanest.vercel.app/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

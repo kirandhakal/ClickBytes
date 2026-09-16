@@ -1,0 +1,48 @@
+{
+  "slug": "general-qa-checklist",
+  "title": "A practical QA checklist before sending software to review",
+  "excerpt": "A general software testing checklist covering requirements, happy paths, negative cases, data checks, accessibility, performance, and release notes.",
+  "category": "Software testing",
+  "publishedAt": "2026-09-16",
+  "readingTime": "4 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Clarify the expected behavior",
+      "paragraphs": [
+        "Before executing tests, I write the feature goal in plain language and confirm the acceptance criteria. A tester should know what counts as pass, fail, blocked, and not tested.",
+        "If the rule is unclear, I record the question instead of guessing silently. Ambiguous requirements often become defects later."
+      ]
+    },
+    {
+      "title": "Cover the main test classes",
+      "items": [
+        "Happy path: the simplest valid journey works end to end.",
+        "Negative path: invalid input is rejected clearly and safely.",
+        "Boundary values: limits, empty states, long content, and repeated actions are handled.",
+        "Role checks: users can only see and do what their role allows.",
+        "Data checks: UI, API response, and stored record agree where access permits.",
+        "Regression checks: nearby older features still work after the change."
+      ]
+    },
+    {
+      "title": "Check the experience around the feature",
+      "paragraphs": [
+        "A feature is more than the submit button. I also check loading states, error messages, keyboard focus, mobile layout, browser console errors, and recovery after a refresh or slow network.",
+        "For public websites, I add SEO basics, metadata, broken links, image alt text, and responsive layout checks."
+      ]
+    },
+    {
+      "title": "Write evidence that helps the team",
+      "paragraphs": [
+        "A strong QA note includes environment, user role, test data, steps, expected result, actual result, and supporting screenshot or request ID. The goal is to make the issue easy to reproduce and the fix easy to verify."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

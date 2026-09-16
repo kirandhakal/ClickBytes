@@ -1,0 +1,47 @@
+{
+  "slug": "hello-palika-saas",
+  "title": "Hello Palika: testing citizen-facing municipal SaaS modules",
+  "summary": "A QA study for publishing, appointments, complaints, decisions, officer availability, and targeted notifications.",
+  "industry": "Municipal SaaS",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Hello Palika includes News, Notices, Events, Appointment, Complaint, Invitation, Decision Management, Active Officer Status, notification, and Municipal Development Plan modules. That makes it a strong QA case for visibility rules, public content accuracy, form validation, and role-based workflows."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "The highest-risk areas are incorrect public information, complaints disappearing after submission, appointments showing wrong status, and notifications sent to the wrong audience. The proposed scope covers one municipality admin, one officer, and one citizen account."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Publish a notice as draft, private, scheduled, and public; verify citizen visibility for each state.",
+        "Submit a complaint with required and optional fields; confirm tracking status and stored evidence.",
+        "Change active officer availability; verify the public status updates without stale information.",
+        "Publish a decision and confirm it is accessible from the intended public page only.",
+        "Send a targeted notification and verify audience, timing, and content."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include role, module, record ID, visibility state, timestamp, notification target, and screenshot or API response where possible. Release criteria should block incorrect public publication, lost complaint records, and wrong-recipient notifications."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Hello Palika",
+      "href": "https://hellopalika.cliffbyte.com/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

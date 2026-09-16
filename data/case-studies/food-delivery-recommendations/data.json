@@ -1,0 +1,47 @@
+{
+  "slug": "food-delivery-recommendations",
+  "title": "Food Delivery AI: testing recommendations, ordering, and user flow quality",
+  "summary": "A QA study for recommendation logic, menu browsing, cart behavior, checkout states, and explainable user outcomes.",
+  "industry": "Food ordering",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Food Delivery AI is listed as an ordering platform with collaborative filtering for personalized recommendations. This study focuses on whether recommendations support the user journey without breaking ordering basics."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "Recommendation features can fail by showing unavailable items, repeating the same choices, ignoring dietary filters, or slowing down the menu. The proposed scope separates core ordering tests from recommendation-quality checks."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "New user with no history sees a sensible fallback list.",
+        "Recommended item is unavailable; verify it is hidden or clearly disabled.",
+        "Add, remove, and update quantities from recommended and normal menu items.",
+        "Use search/filter and confirm recommendations do not override user intent.",
+        "Check recommendation loading states and checkout behavior on slow network."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include user fixture, recommendation input, item availability, cart state, and checkout result. Release should block broken ordering, unavailable recommended items presented as orderable, and misleading totals."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Food Delivery AI",
+      "href": "https://fooddelivery-ten-ebon.vercel.app/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "connect-kisan-notifications",
+  "title": "Connect Kisan: testing scheduled and targeted notifications",
+  "summary": "A QA study for announcement creation, scheduling, delivery rules, audience targeting, and farming stakeholder updates.",
+  "industry": "Agriculture platform",
+  "service": "Portfolio QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Connect Kisan includes notification management for announcements, alerts, and updates to farmers and stakeholders. The public site positions the platform around empowering farmers, so notification correctness matters for timely communication."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "Notification systems fail quietly when time zones, duplicate scheduling, role targeting, or retry behavior is wrong. The proposed scope covers manual creation, schedule changes, cancellation, delivery audience, and event-triggered messages."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Schedule an announcement for the future, edit it, and confirm only the latest version is delivered.",
+        "Cancel a scheduled alert and verify it is not sent.",
+        "Target one farmer group and confirm other roles do not receive the message.",
+        "Trigger an event-based notification twice and verify duplicate protection.",
+        "Test Nepali and English content for display length, readability, and encoding."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include notification ID, target segment, scheduled time, delivery state, recipient sample, and message content. Release should block wrong-recipient delivery and duplicate alerts."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Connect Kisan",
+      "href": "https://connectkisan.com/en"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

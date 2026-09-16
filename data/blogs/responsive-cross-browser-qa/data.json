@@ -1,0 +1,58 @@
+{
+  "slug": "responsive-cross-browser-qa",
+  "title": "Responsive and cross-browser QA for modern web apps",
+  "excerpt": "A general QA article about testing layouts, touch targets, sticky headers, forms, images, and browser-specific visual differences.",
+  "category": "Frontend QA",
+  "publishedAt": "2026-09-16",
+  "readingTime": "3 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Responsive QA is about behavior",
+      "paragraphs": [
+        "A responsive page should not only fit the screen; it should preserve the user journey. I test whether navigation remains reachable, forms remain readable, buttons are easy to tap, and content keeps a clear order.",
+        "For projects like CMS storefronts, college forms, and animated company pages, responsive QA needs both layout checks and workflow checks."
+      ]
+    },
+    {
+      "title": "Viewport set I like to cover",
+      "items": [
+        "Small mobile around 360 to 390 px width.",
+        "Large mobile around 430 px width.",
+        "Tablet around 768 px width.",
+        "Laptop around 1366 px width.",
+        "Wide desktop around 1440 px and above."
+      ]
+    },
+    {
+      "title": "Common defects to look for",
+      "items": [
+        "Horizontal overflow caused by long words, cards, tables, or menus.",
+        "Sticky headers covering anchor targets or form fields.",
+        "Cards with uneven heights that hide calls to action.",
+        "Images cropped so the important subject disappears.",
+        "Hover-only interactions that do not work on touch devices."
+      ]
+    },
+    {
+      "title": "Cross-browser evidence",
+      "paragraphs": [
+        "When a defect appears only in one browser, the report should include browser name, version, operating system, viewport size, and a screenshot. That detail helps separate a product bug from a rendering difference or unsupported behavior."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Chiurika",
+      "href": "https://chiurika.com/"
+    },
+    {
+      "label": "Dwarika Engineering",
+      "href": "https://dwarikaengineering.com/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

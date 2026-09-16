@@ -1,0 +1,47 @@
+{
+  "slug": "dwarika-animation-ux",
+  "title": "Dwarika Engineering: QA for animated UI, 3D sections, and responsive experience",
+  "summary": "A QA study for scroll-driven animation, motion performance, visual consistency, cross-browser behavior, and reduced-motion accessibility.",
+  "industry": "Interactive company website",
+  "service": "Portfolio UI/UX QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Dwarika Engineering is listed in my CV as an interactive company website with scroll-driven animations, smooth page transitions, 3D visual experiences, and motion-led sections. This study focuses on UI/UX quality, animation reliability, and cross-device behavior."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "Animation can make a site feel premium, but it can also hide content, break scrolling, hurt performance, or create accessibility problems. The proposed scope checks visual states, motion timing, layout stability, browser differences, and reduced-motion preferences."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Scroll slowly, quickly, and with keyboard navigation; verify sections enter and exit without overlapping text.",
+        "Resize between mobile, tablet, and desktop; confirm 3D or motion sections remain framed and readable.",
+        "Enable reduced motion and verify key content remains available without required animation.",
+        "Compare Chrome, Firefox, Safari, and Edge for canvas, transforms, font rendering, and scroll behavior.",
+        "Throttle CPU/network and record whether animation causes blank sections or delayed content."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include viewport, browser, scroll position, screenshot or video, performance observation, and reduced-motion state. Release should block unreadable content, trapped scrolling, broken mobile layout, and animation that prevents users from reaching important information."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Dwarika Engineering",
+      "href": "https://dwarikaengineering.com/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

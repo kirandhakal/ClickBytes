@@ -1,0 +1,47 @@
+{
+  "slug": "cv-maker-export",
+  "title": "Dynamic CV Maker: QA for live preview, styling, and export",
+  "summary": "A QA study for resume builder state, ATS-friendly layout, style changes, preview accuracy, and export reliability.",
+  "industry": "Productivity tool",
+  "service": "Portfolio UI/UX QA study",
+  "sections": [
+    {
+      "title": "QA context from my CV",
+      "paragraphs": [
+        "Dynamic CV Maker is listed as an ATS-friendly resume generator with real-time preview, dynamic styling, state management, and export functionality. This study focuses on UI state, content persistence, layout integrity, and generated output."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "Resume tools must preserve user input and export a clean document. The proposed scope tests field editing, section ordering, styling options, preview synchronization, long content, and export output."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Edit a field and verify preview updates without losing other sections.",
+        "Paste long text, URLs, Unicode names, and empty optional fields.",
+        "Change style settings and verify spacing, contrast, and ATS readability.",
+        "Export the same CV twice and compare content consistency.",
+        "Reload or navigate away according to the agreed persistence rule."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Evidence should include input data, selected template/style, preview screenshot, exported file observation, and browser. Release should block lost user content, broken export, unreadable layout, and mismatched preview/export output."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Dynamic CV Maker",
+      "href": "https://cv.dhakalkiran.com.np/"
+    },
+    {
+      "label": "QA CV — Kiran Dhakal",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}
