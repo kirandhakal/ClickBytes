@@ -1,0 +1,54 @@
+{
+  "slug": "testing-dynamic-enrollment-forms",
+  "title": "A dynamic form is more than its visible fields",
+  "excerpt": "A proposed test strategy for configurable enrollment forms, inspired by my development work on Vibe College.",
+  "category": "Test design",
+  "publishedAt": "2026-09-16",
+  "readingTime": "3 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "The configuration is part of the input",
+      "paragraphs": [
+        "At Vibe College I developed configurable forms, intakes, course selection, and review workflows. A test plan for this kind of product should cover both administrator configuration and the student’s resulting experience. This is a proposed testing approach, not a claim of measured QA results.",
+        "Begin with one intake, one course, and one conditional field. Record the schema version and business rules. Changing the configuration can change the meaning of a saved application even when its visible values stay the same."
+      ]
+    },
+    {
+      "title": "Design a boundary fixture",
+      "paragraphs": [
+        "Suppose an illustrative intake allows an attachment up to 5 MB. First agree whether that means 5,000,000 or 5,242,880 bytes, and which file types are accepted. Then test just below, at, and above the limit. Use an actual file of the required size instead of changing only its name."
+      ],
+      "items": [
+        "Required field: omitted, whitespace only, valid value.",
+        "Conditional field: show it, fill it, hide it again, then inspect the submitted payload.",
+        "Saved draft: reopen after a schema change and check the agreed migration behavior.",
+        "Repeated submit: verify that one accepted application is created."
+      ]
+    },
+    {
+      "title": "Check beyond the success message",
+      "paragraphs": [
+        "A success message proves only that the interface displayed one. Compare the persisted record with the submitted data and verify that the reviewer sees the same course and intake. Confirm the approved application is the one used for the offer letter.",
+        "Test a timeout after the server accepts submission. On retry, the user should have a clear path to their existing application. Document the expected behavior before treating duplicate prevention as a pass criterion."
+      ]
+    },
+    {
+      "title": "Make a compact regression pack",
+      "paragraphs": [
+        "Keep a representative valid submission, a rejected boundary input, a draft recovery, and one full approval-to-letter journey. Add cases when configuration changes introduce new branches. Keep test data independent so one failed scenario does not invalidate the rest.",
+        "The same focus on dependable citizen-facing services discussed by Information Care applies here at a domain level: completing an online form should lead to a traceable outcome. The enrollment examples in this article come from my CV and my own QA design exercise."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Development experience — Kiran Dhakal’s CV",
+      "href": "/images/assets/cv.html"
+    },
+    {
+      "label": "Information Care: digital government context",
+      "href": "https://infocarenepal.com/blogs/view-details/digital-transformation-for-local-governments-complete-guide-smart-municipalities"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "slug": "pos-order-integrity",
+  "title": "Syanko POS: protecting order and payment consistency",
+  "summary": "A proposed regression study for order submission, kitchen tickets, billing arithmetic, payment ambiguity, and printing.",
+  "industry": "Restaurant operations",
+  "service": "Portfolio test-design study",
+  "sections": [
+    {
+      "title": "My development contribution",
+      "paragraphs": [
+        "My CV lists development of order management, kitchen order tickets, automated bills, taxes, discounts, multiple payment methods, and thermal receipts using React, Node.js, REST APIs, and PostgreSQL."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "The proposed focus is a mismatch between what the cashier sees, what the kitchen receives, and what the customer pays. Confirm rounding, discount ordering, cancellation, and retry rules before execution. Use a payment sandbox and synthetic orders."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Submit twice during a slow response: inspect accepted order count and kitchen tickets.",
+        "Apply a discount at its agreed limit: compare the total with an independent calculation.",
+        "Delayed payment response: maintain an explicit pending state and reconcile the result.",
+        "Receipt printer fails: reprint the receipt without recharging.",
+        "Amend an already dispatched order: verify the agreed kitchen update and bill adjustment."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Link the order ID, payment reference, kitchen ticket, and receipt. Keep expected calculations separate from application code. Proposed release criteria require no unresolved duplicate-charge or order-loss failures in the executed scope.",
+        "Status: design only. No live payment tests, measured improvements, or production defect claims are included."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Development experience — Kiran Dhakal’s CV",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

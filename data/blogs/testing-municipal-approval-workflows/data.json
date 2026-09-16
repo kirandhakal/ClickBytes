@@ -1,0 +1,57 @@
+{
+  "slug": "testing-municipal-approval-workflows",
+  "title": "Test the handoff, not just the approval button",
+  "excerpt": "A QA design exercise for municipal services: follow one application across roles, retries, and state changes.",
+  "category": "E-governance QA",
+  "publishedAt": "2026-09-16",
+  "readingTime": "3 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Start with a transition map",
+      "paragraphs": [
+        "My work on Dhangadhi Service Bus included routing applications between municipal roles. That development context suggests a useful testing question: what must remain true when ownership changes? This article proposes tests; it does not describe an executed production audit.",
+        "List each state, the actor allowed to move it, the required documents, and the side effects. Forwarding, sending back, approving, and rejecting are separate transitions with different preconditions. Confirm the actual rules with the product team before creating expected results."
+      ]
+    },
+    {
+      "title": "Use a small, explicit permission matrix",
+      "paragraphs": [
+        "For an illustrative fixture, create a citizen, a reviewing officer, and an approver. Give each a separate test account. Check the same application through each account, including direct API requests in an authorized test environment. A hidden button alone does not establish that the operation is protected."
+      ],
+      "items": [
+        "Citizen attempts an officer-only transition: reject it and preserve state.",
+        "Reviewer sends an application back: record the reason and notify the correct owner.",
+        "A second officer acts on an outdated screen: reject or reconcile the stale change according to the agreed rule."
+      ]
+    },
+    {
+      "title": "Follow the side effects",
+      "paragraphs": [
+        "After a transition, inspect the status, assignee, audit entry, and notification together. If the browser reports a timeout, fetch the application again before deciding the operation failed. A retry must not create a second decision or deliver an unrelated notification.",
+        "Evidence should include the starting state, account role, request identifier, resulting state, and observation time. Use synthetic records and redact tokens from attachments. A report becomes actionable when another engineer can replay the exact transition."
+      ]
+    },
+    {
+      "title": "Choose release evidence",
+      "paragraphs": [
+        "For this exercise I would prioritize unauthorized transitions, lost applications, and inconsistent decisions. A release summary should state which roles and transitions were covered, what remains blocked, and what was not tested. A green list of button clicks cannot substitute for that coverage.",
+        "Information Care’s articles supplied the broader civic-service and data-protection context. The fixtures, scenarios, and QA interpretation here are original proposals based on my development background."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Development experience — Kiran Dhakal’s CV",
+      "href": "/images/assets/cv.html"
+    },
+    {
+      "label": "Information Care: digital government context",
+      "href": "https://infocarenepal.com/blogs/view-details/digital-transformation-for-local-governments-complete-guide-smart-municipalities"
+    },
+    {
+      "label": "Information Care: government platform security context",
+      "href": "https://infocarenepal.com/blogs/view-details/cybersecurity-best-practices-for-government-digital-platforms"
+    }
+  ]
+}

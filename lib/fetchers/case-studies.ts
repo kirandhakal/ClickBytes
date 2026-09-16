@@ -1,7 +1,9 @@
-import caseStudiesData from "@/data/case-studies/case-studies.json";
+import municipal from "@/data/case-studies/municipal-workflow/data.json";
+import enrollment from "@/data/case-studies/enrollment-forms/data.json";
+import pos from "@/data/case-studies/pos-order-integrity/data.json";
 import type { CaseStudy } from "@/types/case-study";
 
-const caseStudies = caseStudiesData as CaseStudy[];
+const caseStudies: CaseStudy[] = [municipal, enrollment, pos];
 
 export function getAllCaseStudies() {
   return [...caseStudies];

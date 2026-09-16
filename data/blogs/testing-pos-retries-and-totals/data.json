@@ -1,0 +1,50 @@
+{
+  "slug": "testing-pos-retries-and-totals",
+  "title": "One order, one charge: designing POS regression tests",
+  "excerpt": "An original QA exercise based on Syanko POS development: totals, kitchen tickets, payment ambiguity, and receipt retries.",
+  "category": "Transaction testing",
+  "publishedAt": "2026-09-16",
+  "readingTime": "3 min read",
+  "author": "Kiran Dhakal",
+  "sections": [
+    {
+      "title": "Agree on the arithmetic first",
+      "paragraphs": [
+        "My Syanko POS development work covered orders, kitchen tickets, billing, taxes, discounts, and receipts. Testing that chain begins with explicit pricing rules. This article proposes a regression strategy; it does not claim that these defects were found in the product.",
+        "For an illustrative rule, two items cost 250 each, a 10% discount applies before a 13% tax, and rounding happens once at the end. The expected total is 508.50. This is synthetic test data, not a statement of the product’s actual tax policy. Agree on the real rule before using any numeric oracle."
+      ]
+    },
+    {
+      "title": "Treat retries as normal inputs",
+      "paragraphs": [
+        "A slow response leaves the cashier uncertain about whether an order was accepted. Test a repeated action after a timeout and inspect stored orders, payment references, and kitchen tickets. Define which identifier binds each attempt to the same operation."
+      ],
+      "items": [
+        "Double click submit: inspect whether it creates duplicate accepted orders.",
+        "Payment response is delayed: inspect pending state before retrying.",
+        "Printer fails after payment: retry the receipt without creating another charge.",
+        "Item changes after kitchen dispatch: verify the agreed amendment flow."
+      ]
+    },
+    {
+      "title": "Compare three representations",
+      "paragraphs": [
+        "Use the order record, kitchen ticket, and receipt as separate observations. Compare item identifiers, quantity, modifiers, and totals. A correct receipt can conceal an incorrect kitchen ticket, so a single screenshot is insufficient evidence.",
+        "For each run, record the environment, order identifier, initial data, action sequence, and final records. Keep expected totals independent of the application’s calculation so the test does not reproduce the same mistake."
+      ]
+    },
+    {
+      "title": "Report uncertainty honestly",
+      "paragraphs": [
+        "A proposed regression pack should include normal checkout, a discount boundary, a timeout, and a receipt retry. Test execution and observations must still be collected before claiming the workflow is reliable.",
+        "If a payment simulator cannot reproduce a delayed callback, mark that case blocked. The useful release summary distinguishes passed scenarios, failed scenarios, blocked checks, and untested integrations."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Development experience — Kiran Dhakal’s CV",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

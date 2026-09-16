@@ -1,0 +1,45 @@
+{
+  "name": "Kiran Dhakal",
+  "mark": "KD",
+  "tagline": "SOFTWARE QUALITY ASSURANCE",
+  "homeLabel": "Kiran Dhakal home",
+  "home": "Home",
+  "navigationLabel": "Primary navigation",
+  "mobileNavigationLabel": "Mobile navigation",
+  "menuLabel": "Toggle navigation",
+  "contactLabel": "Let’s talk",
+  "contactHref": "/contact",
+  "navigation": [
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Skills",
+      "href": "/skills"
+    },
+    {
+      "label": "Work",
+      "href": "/work"
+    },
+    {
+      "label": "Process",
+      "href": "/process"
+    },
+    {
+      "label": "Case studies",
+      "href": "/case-studies"
+    },
+    {
+      "label": "Blog",
+      "href": "/blogs"
+    },
+    {
+      "label": "QA tools",
+      "href": "/tools"
+    }
+  ],
+  "footer": "Kiran Dhakal. Built with care. Tested with curiosity.",
+  "backToTop": "Back to top ↑",
+  "skip": "Skip to content"
+}

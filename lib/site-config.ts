@@ -28,9 +28,5 @@ export const siteConfig = {
   },
 } as const;
 
-export const navigation = [
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Work", href: "/#work" },
-  { label: "Process", href: "/#process" },
-] as const;
+export const navigation = site.navigation;
+import site from "@/data/site/data.json";

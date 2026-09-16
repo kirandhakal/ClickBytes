@@ -8,7 +8,6 @@ export type BlogPost = {
   publishedAt: string;
   readingTime: string;
   author: string;
-  content: string[];
   sections: ContentSection[];
   sources: ContentLink[];
 };

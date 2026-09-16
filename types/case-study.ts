@@ -9,10 +9,6 @@ export type CaseStudy = {
   summary: string;
   industry: string;
   service: string;
-  challenge: string;
-  solution: string;
-  outcome: string;
-  metrics: CaseStudyMetric[];
   sections: ContentSection[];
   sources: ContentLink[];
 };

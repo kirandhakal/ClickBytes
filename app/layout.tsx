@@ -7,6 +7,7 @@ import { ToastProvider } from "@/components/ui/overlays";
 import { createMetadata } from "@/lib/metadata";
 import { personSchema, websiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
+import site from "@/data/site/data.json";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -26,10 +27,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="min-h-dvh antialiased">
+      <body id="top" className="min-h-dvh antialiased">
+        <a href="#main-content" className="skip-link">{site.skip}</a>
         <ToastProvider>
           <SiteHeader />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <SiteFooter />
         </ToastProvider>
         <SchemaOrg data={[personSchema(), websiteSchema()]} />

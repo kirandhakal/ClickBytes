@@ -1,0 +1,44 @@
+{
+  "slug": "enrollment-forms",
+  "title": "Vibe College: a test strategy for configurable enrollment",
+  "summary": "A proposed study of conditional fields, saved drafts, intake rules, review transitions, and offer-letter consistency.",
+  "industry": "Education",
+  "service": "Portfolio test-design study",
+  "sections": [
+    {
+      "title": "My development contribution",
+      "paragraphs": [
+        "My CV records a drag-and-drop form builder, configurable intakes, course selection, application workflows, offer letters, and installment management. The stack includes Next.js, Node.js, REST APIs, and PostgreSQL."
+      ]
+    },
+    {
+      "title": "Risk & fixture design",
+      "paragraphs": [
+        "Use synthetic applicants and at least two form versions. Clarify whether existing drafts remain tied to their original version or migrate. Define required fields, file limits, course availability, and allowed reviewer transitions before setting expected results."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Required value omitted: reject submission with a useful field message.",
+        "A conditional field becomes hidden: verify how its old value is handled.",
+        "Draft reopens after intake changes: apply the agreed version policy without silent data loss.",
+        "Repeated submit: avoid duplicate accepted applications.",
+        "Approved application: generate the offer from the correct course, applicant, and fee configuration."
+      ]
+    },
+    {
+      "title": "Evidence & proposed outcome",
+      "paragraphs": [
+        "Compare UI input, request payload, saved record, reviewer view, and generated document. Record the schema version alongside the application identifier.",
+        "The proposed output is a traceable regression checklist with documented configuration dependencies. Status: design only; execution results are not available."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Development experience — Kiran Dhakal’s CV",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

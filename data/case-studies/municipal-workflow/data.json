@@ -1,0 +1,44 @@
+{
+  "slug": "municipal-workflow",
+  "title": "Dhangadhi Service Bus: tracing an application across roles",
+  "summary": "A proposed risk-based test plan for municipal approvals, document checks, payment states, and notifications.",
+  "industry": "E-governance",
+  "service": "Portfolio test-design study",
+  "sections": [
+    {
+      "title": "My development contribution",
+      "paragraphs": [
+        "The CV documents my work on e-KYC, migration, recommendations, appointments, workflow routing, payments, document management, and notifications using Next.js, NestJS, GraphQL, and PostgreSQL."
+      ]
+    },
+    {
+      "title": "Risk & proposed scope",
+      "paragraphs": [
+        "The highest-impact risks in this exercise are unauthorized decisions, applications stranded between officers, and inconsistent payment or document states. The proposed scope follows an application from submission to a terminal decision, including return and resubmission paths."
+      ]
+    },
+    {
+      "title": "Example test scenarios",
+      "items": [
+        "Unauthorized approval: use a citizen account; expect rejection with no state change.",
+        "Send back and resubmit: preserve application history and show the latest submitted documents.",
+        "Stale action: two officers act from the same starting state; prevent conflicting terminal decisions.",
+        "Payment pending: refresh and retry; reconcile against the agreed payment state without duplication.",
+        "Notification routing: notify the intended recipient with the correct application reference."
+      ]
+    },
+    {
+      "title": "Evidence & release criteria",
+      "paragraphs": [
+        "Capture starting role, application ID, state, request, and resulting audit trail for each scenario. Proposed release criteria require resolved high-impact authorization and data-integrity failures, with blocked integrations explicitly listed.",
+        "Status: design only. These scenarios have not been executed as part of this portfolio, and no defect counts or improvement metrics are asserted."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Development experience — Kiran Dhakal’s CV",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

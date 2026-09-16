@@ -78,6 +78,57 @@
 }
 
 * { border-color: var(--border); }
+main { min-height: 70vh; }
+.skip-link { position: fixed; top: -100px; left: 1rem; z-index: 100; background: #dfff54; color: #17211f; padding: 1rem; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: 3px solid #087f5b; outline-offset: 5px; }
+.page-heading { padding-block: 5rem 4rem; border-bottom: 1px solid #cbd0c8; background: #f0eee6; }
+.page-heading h1 { max-width: 1000px; font: 400 clamp(2.5rem, 5vw, 4.5rem)/1.08 Georgia, serif; letter-spacing: -.045em; text-wrap: balance; }
+.page-description { max-width: 760px; margin-top: 1.5rem; color: #56635e; font-size: 1.08rem; line-height: 1.8; }
+.page-body { padding-block: 4rem 5rem; }
+.content-sections { max-width: 880px; }
+.content-section { padding-block: 0 2.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid #cbd0c8; }
+.content-section h2, .directory-heading h2, .article-sources h2, .tool-preview h2 { font: 400 clamp(1.6rem, 3vw, 2.1rem)/1.2 Georgia, serif; margin-bottom: 1rem; }
+.content-section p, .content-section li { color: #56635e; font-size: 1rem; line-height: 1.9; }
+.content-section p + p { margin-top: 1rem; }
+.content-section ul, .article-sources ul { list-style: disc; padding-left: 1.3rem; margin-top: 1rem; }
+.content-section li { margin-bottom: .6rem; }
+.content-section a, .text-link, .article-sources a { color: #087f5b; text-underline-offset: 4px; }
+.content-section a:hover, .article-sources a:hover, .text-link:hover { text-decoration: underline; }
+.page-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.page-actions a { overflow-wrap: anywhere; }
+.directory-heading { margin-bottom: 2rem; }
+.directory-heading p { color: #56635e; line-height: 1.7; }
+.directory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.directory-card { display: block; padding: 2rem; background: #fffef9; border: 1px solid #cbd0c8; transition: border-color .2s; }
+.directory-card:hover { border-color: #087f5b; }
+.directory-card h2, .directory-card h3 { font: 400 1.7rem/1.25 Georgia, serif; margin-bottom: 1rem; }
+.directory-card > p:not(.section-kicker) { line-height: 1.8; color: #56635e; margin-bottom: 1rem; }
+.article-body { max-width: 880px; }
+.article-meta { color: #56635e; font: .8rem/1.7 ui-monospace, monospace; margin-bottom: 2rem; }
+.article-sources { padding: 1.5rem; background: #e7eee8; margin-bottom: 2rem; }
+.article-sources li { margin-bottom: .7rem; }
+.tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.tool-form { display: grid; gap: 1.3rem; }
+.tool-form label { display: grid; gap: .5rem; color: #17211f; font-size: .88rem; font-weight: 700; }
+.tool-form input, .tool-form textarea, .tool-form select { width: 100%; border: 1px solid #aeb7ae; background: #fffef9; padding: .8rem; font: inherit; font-weight: 400; border-radius: 0; }
+.tool-form textarea { resize: vertical; }
+.tool-form button { cursor: pointer; }
+.tool-preview { min-width: 0; padding: 2rem; border: 1px solid #cbd0c8; background: #fffef9; position: sticky; top: 100px; }
+.tool-preview pre { white-space: pre-wrap; overflow-wrap: anywhere; font: .85rem/1.8 ui-monospace, monospace; }
+.tool-status { min-height: 1.5rem; color: #087f5b; }
+.desktop-nav { gap: 1.1rem !important; }
+.desktop-nav [aria-current="page"], .mobile-menu [aria-current="page"] { color: #087f5b; text-decoration: underline; text-underline-offset: 6px; }
+.mobile-menu > button { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #cbd0c8; cursor: pointer; }
+.mobile-menu nav { max-height: calc(100dvh - 90px); overflow-y: auto; }
+@media (max-width: 1100px) { .desktop-nav, .header-cta { display: none !important; } .mobile-menu { display: block !important; } }
+@media (max-width: 760px) {
+  .page-heading { padding-block: 3rem; }
+  .page-body { padding-block: 2.5rem; }
+  .directory-grid, .tool-grid { grid-template-columns: 1fr; }
+  .directory-card, .tool-preview { padding: 1.4rem; }
+  .tool-preview { position: static; }
+}
 html { scroll-behavior: smooth; }
 body {
   background: var(--background);
