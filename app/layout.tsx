@@ -3,7 +3,6 @@ import "@/app/globals.css";
 import { SchemaOrg } from "@/components/schema-org";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { ThemeProvider } from "@/context/theme-context";
 import { ToastProvider } from "@/components/ui/overlays";
 import { createMetadata } from "@/lib/metadata";
 import { personSchema, websiteSchema } from "@/lib/schema";
@@ -24,26 +23,15 @@ export const viewport: Viewport = {
   themeColor: "#087f5b",
 };
 
-const themeScript = `
-  try {
-    const stored = localStorage.getItem('theme');
-    const dark = stored ? stored === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.classList.toggle('dark', dark);
-  } catch (_) {}
-`;
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
+    <html lang="en">
       <body className="min-h-dvh antialiased">
-        <ThemeProvider>
-          <ToastProvider>
-            <SiteHeader />
-            <main>{children}</main>
-            <SiteFooter />
-          </ToastProvider>
-        </ThemeProvider>
+        <ToastProvider>
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+        </ToastProvider>
         <SchemaOrg data={[personSchema(), websiteSchema()]} />
       </body>
     </html>

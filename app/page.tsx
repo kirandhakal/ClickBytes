@@ -21,7 +21,7 @@ import {
   TerminalSquare,
 } from "lucide-react";
 import { SchemaOrg } from "@/components/schema-org";
-import { personSchema, webPageSchema } from "@/lib/schema";
+import { webPageSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 const qualitySkills = [
@@ -75,7 +75,7 @@ const developerTools = ["JavaScript", "TypeScript", "React", "Next.js", "Node.js
 export default function HomePage() {
   return (
     <>
-      <SchemaOrg data={[webPageSchema("/", siteConfig.name, siteConfig.description), personSchema()]} />
+      <SchemaOrg data={webPageSchema("/", siteConfig.name, siteConfig.description)} />
 
       <section className="hero-section" aria-labelledby="hero-title">
         <div className="hero-grid" aria-hidden="true" />
