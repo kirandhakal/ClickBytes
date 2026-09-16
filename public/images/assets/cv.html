@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran Dhakal - Full Stack Engineer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --blue: #1d4ed8;
+            --slate: #334155;
+            --muted: #64748b;
+            --line: #040404;
+            --bg: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--black);
+            line-height: 1.6;
+            font-size: 13.5px;
+        }
+
+        .cv {
+            max-width: 860px;
+            margin: 20px auto;
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .08), 0 8px 32px rgba(0, 0, 0, .06);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 20px 32px 28px;
+            border-bottom: 2px solid var(--black);
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: var(--black);
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 11.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--blue);
+            margin-bottom: 18px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 4px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--slate);
+            align-items: center;
+        }
+
+        .contact-row .sep {
+            color: var(--line);
+            font-size: 16px;
+            line-height: 1;
+            margin: 0 2px;
+        }
+
+        .contact-row a {
+            color: var(--slate);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color .2s, border-color .2s;
+        }
+
+        .contact-row a:hover {
+            color: var(--blue);
+            border-bottom-color: var(--blue);
+        }
+
+        .body {
+            padding: 0 42px 40px;
+        }
+
+        h2 {
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--black);
+            margin: 32px 0 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1.5px;
+            background: var(--black);
+        }
+
+        .summary {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: var(--slate);
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 24px;
+        }
+
+        .skill-row {
+            font-size: 13.5px;
+            color: var(--black);
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: var(--black);
+            margin-right: 4px;
+        }
+
+        .exp-block {
+            margin-bottom: 28px;
+        }
+
+        .exp-company-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .exp-company {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--blue);
+            letter-spacing: -0.01em;
+        }
+
+        .exp-duration {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--muted);
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 2px 10px;
+            white-space: nowrap;
+        }
+
+        .proj-card {
+            padding: 0 0 18px 0;
+            margin-bottom: 18px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .proj-card:last-child {
+            border-bottom: none;
+        }
+
+        .proj-card-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .proj-card-title a {
+            font-size: 11px;
+            color: var(--blue);
+            text-decoration: none;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .proj-card-desc {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.6;
+            margin-bottom: 6px;
+        }
+
+        .proj-tech {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .proj-card-list {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .proj-card-list li {
+            font-size: 14px;
+            color: var(--slate);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .rel-proj-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .rel-proj-card {
+            padding: 14px;
+            background: #fcfcfc;
+            border: 1px solid #f1f5f9;
+            border-radius: 4px;
+        }
+
+        .rel-proj-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .rel-proj-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .rel-proj-link a {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .rel-proj-desc {
+            font-size: 13.5px;
+            color: var(--slate);
+            line-height: 1.5;
+        }
+
+        .rel-proj-tech {
+            margin-top: 6px;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        .edu-item {
+            margin-bottom: 16px;
+        }
+
+        .edu-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .edu-degree {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .edu-date {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .edu-school {
+            font-size: 13px;
+            color: var(--slate);
+        }
+
+        .additional-row {
+            font-size: 13.5px;
+            color: var(--slate);
+            margin-bottom: 5px;
+        }
+
+        .bold {
+            font-weight: 700;
+            color: var(--black);
+            margin-right: 4px;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .cv {
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .exp-duration {
+                background: none;
+                border: 1px solid #ccc;
+            }
+
+            .proj-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .rel-proj-card {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv">
+        <header>
+            <h1>Kiran Dhakal</h1>
+            <div class="subtitle">Full Stack Engineer</div>
+            <div class="contact-row">
+                <span>Kathmandu, Nepal</span>
+                <span class="sep">|</span>
+                <span>9827591616</span>
+                <span class="sep">|</span>
+                <a href="mailto:kirandhakal715@gmail.com">kirandhakal715@gmail.com</a>
+              
+                <span class="sep">|</span>
+                <a href="https://dhakalkiran.com.np" target="_blank">dhakalkiran.com.np</a>
+                <span class="sep">|</span>
+                <a href="https://linkedin.com/in/kirandhakal7" target="_blank">linkedin.com/in/kirandhakal7</a>
+            </div>
+        </header>
+
+        <div class="body">
+            <h2>Professional Summary</h2>
+
+            <p class="summary">
+                Computer Engineer with 2+ years of experience designing and developing scalable full-stack web
+                applications using
+                React.js, Next.js, Node.js, NestJS, TypeScript, PostgreSQL, GraphQL and REST APIs. Experienced in building
+                enterprise SaaS
+                platforms, e-Governance systems, dynamic form builders, workflow automation, POS solutions, and CMS
+                platforms.
+                Proven expertise in architecting role-based workflows, configurable business processes, notification
+                systems, and
+                digital transformation solutions that improve operational efficiency. Passionate about clean
+                architecture,
+                performance optimization, cloud-native development, and integrating AI to build intelligent, real-world
+                software
+                solutions.
+            </p>
+
+            <h2>Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-row"><span class="skill-label">Languages:</span> JavaScript, TypeScript, Python
+                </div>
+                <div class="skill-row"><span class="skill-label">Frontend:</span> React.js, Next.js, Tailwind CSS, Redux
+                </div>
+                <div class="skill-row"><span class="skill-label">Backend:</span> Node.js, Nestjs, GraphQL, REST APIs,
+                    PostgreSQL, MongoDB</div>
+                <div class="skill-row"><span class="skill-label">Tools:</span> Docker, Git, n8n, AWS, Orcale
+                    ,DigitalOcean, Linux
+                </div>
+            </div>
+
+            <h2>Professional Experience</h2>
+            <div class="exp-block">
+                <div class="exp-company-row">
+                    <span class="exp-company">Information Care Pvt. Ltd.</span>
+                    <span class="exp-duration">Present</span>
+                </div>
+
+            
+
+                <div class="proj-card">
+                    <div class="proj-card">
+                        <div class="proj-card-title">
+                            Dhangadhi Service Bus – Municipal Services Portal
+                            <a href="https://servicebus.palikaportal.com/" target="_blank">
+                                View Live ↗
+                            </a>
+                        </div>
+
+                        <div class="proj-card-list">
+                            <ul>
+                                <li>Developed and maintained an end-to-end municipal e-Governance platform for
+                                    delivering digital citizen services.</li>
+
+                                <li>Engineered e-KYC and citizenship migration workflows for migration into and out of
+                                    the municipality with secure document verification.</li>
+
+                                <li>Designed and implemented configurable Sifarish (Recommendation Letter) and
+                                    Appointment Management modules with automated workflow routing.</li>
+
+                                <li>Built a role-based workflow engine supporting forward, send back, approve, reject,
+                                    and automatic assignment of municipal services.</li>
+
+                                <li>Integrated secure online payment functionality for municipal services to enable
+                                    seamless digital transactions.</li>
+
+                                <li>Developed Darta and Chalani modules to streamline official municipal document
+                                    management.</li>
+
+                                <li>Implemented real-time notification services to keep citizens informed about
+                                    application progress, approvals, and service status.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="proj-card-desc">
+                        A Digital platform for municipal services, enabling citizens to access essential services such
+                        as sifarish (recommendation letters), complaint registration, and online applications. The
+                        system streamlined traditional paper-based workflows into a fully digital, paperless process,
+                        improving efficiency and transparency in municipal operations
+                    </div> -->
+                    <div class="proj-tech">Tech: Next.js, Nest.js, GraphQL , PostgreSQL</div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-card">
+                        <div class="proj-card-title">
+                            Hello Palika — Municipal SaaS Platform
+                            <a href="https://hellopalika.cliffbyte.com/" target="_blank">
+                                View Live ↗
+                            </a>
+                        </div>
+
+                        <div class="proj-card-list">
+                            <ul>
+                                <li>Developed a centralized SaaS platform that enhances communication and digital
+                                    service delivery between municipalities and citizens.</li>
+
+                                <li>Built News, Notices, and Events management modules, enabling municipal officials to
+                                    publish real time public announcements.</li>
+                                <li>Designed and developed Appointment, Complaint, and Invitation management modules to
+                                    streamline citizen interactions with municipal offices.</li>
+                                <li>Implemented a municipal Decision Management system to digitally publish official
+                                    decisions and resolutions for public access.</li>
+
+                                <li>Developed a role based notification system to deliver timely updates and alerts to
+                                    citizens based on their respective municipalities.</li>
+
+                                <li>Implemented an Active Officer Status feature, allowing citizens to view whether
+                                    municipal officials are currently available or out of office.</li>
+
+
+                                <li>Built a Municipal Development Plan module to publish projects, plans, and
+                                    development initiatives, improving transparency.</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="proj-tech">
+                            Tech: React.js, Node.js, REST APIs, PostgreSQL
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-card">
+                            <div class="proj-card-title">
+                                Vibe College — Dynamic Enrollment & Form Management System
+                                <a href="https://www.vibecollege.edu.au/" target="_blank">
+                                    View Live ↗
+                                </a>
+                            </div>
+
+                            <div class="proj-card-list">
+                                <ul>
+                                    <li>Developed a drag-and-drop (DnD) dynamic form builder that enables college
+                                        administrators to create and manage customizable enrollment forms without code.
+                                    </li>
+
+                                    <li>Built a configurable intake management system allowing administrators to create
+                                        multiple intakes, define application requirements, and manage admission
+                                        workflows.</li>
+
+                                    <li>Implemented a dynamic course and subject selection module where students can
+                                        choose courses, subjects, and study options during the enrollment process.</li>
+
+                                    <li>Developed an automated offer letter generation system that creates and publishes
+                                        offer letters upon successful application approval.</li>
+
+                                    <li>Designed a complete application workflow supporting draft, submission, forward,
+                                        receive, review, approve, reject, and status tracking across multiple
+                                        administrative roles.</li>
+
+                                    <li>Implemented course fee and installment management, allowing administrators to
+                                        configure tuition fees, payment plans, and installment schedules for each
+                                        course.</li>
+
+                                    <!-- <li>Built modules for publishing notices, announcements, and important documents to improve communication between the institution and prospective students.</li>
+
+            <li>Developed reusable dynamic form components with schema-driven rendering, enabling rapid creation of new admission forms while reducing development effort.</li>
+       -->
+                                </ul>
+                            </div>
+
+                            <div class="proj-tech">
+                                Tech: Next.js, Node.js, REST APIs, PostgreSQL
+                            </div>
+                        </div>
+
+                        <div class="proj-card">
+                            <div class="proj-card">
+                                <div class="proj-card-title">
+                                    CTF School Management System
+                                    <a href="https://ctfnepal.com/" target="_blank">
+                                        View Live ↗
+                                    </a>
+                                </div>
+
+                                <div class="proj-card-list">
+                                    <ul>
+
+
+                                        <li>Implemented automatic report card generation with subject-wise marks, grade
+                                            calculations, rankings, attendance summaries, and printable academic
+                                            transcripts.</li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="proj-tech">
+                                    Tech: React.js, Node.js, REST APIs, PostgreSQL
+                                </div>
+                            </div>
+
+                            <div class="proj-card">
+                                <div class="proj-card">
+                                    <div class="proj-card-title">
+                                        Churika
+                                        <a href="https://chiurika.com/" target="_blank">
+                                            View Live ↗
+                                        </a>
+                                    </div>
+
+                                    <div class="proj-card-list">
+                                        <ul>
+                                            <li>Developed a CMS for the eCommerce platform, enabling administrators to
+                                                manage homepage content, banners, collections, promotional sections, and
+                                                featured products without code changes.</li>
+
+                                            <li>Integrated GraphQL APIs to efficiently fetch and update CMS content,
+                                                optimizing data loading and improving frontend performance.</li>
+
+                                            <li>Implemented a responsive design that seamlessly adapts to different
+                                                screen sizes, ensuring a consistent user experience across devices.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="proj-tech">
+                                        Tech: React.js, Tailwind CSS, GraphQL
+                                    </div>
+                                </div>
+
+                                <!-- <div class="proj-card">
+                                    <div class="proj-card-title">Information Care — company Website Redesign
+                                        <a href="https://infocarenepal.com/" target="_blank">View Live ↗</a>
+                                    </div>
+                                    <div class="proj-card-desc">
+                                        Migrated the legacy codebase to React and overhauled the UX/UI. Introduced a
+                                        conversion-focused
+                                        layout with improved navigation and responsive design to elevate the brand's
+                                        digital
+                                        identity.
+                                    </div>
+                                    <div class="proj-card-list">
+                                        <ul>
+                                            <li>Describe a specific feature or system you designed and shipped, with
+                                                measurable
+                                                impact
+                                                (e.g.
+                                                "Built a paperless municipal workflow that cut processing time by X%").
+                                            </li>
+                                            <li>Highlight a performance or architecture improvement you led (e.g.
+                                                "Refactored
+                                                GraphQL
+                                                queries to
+                                                reduce data retrieval latency").</li>
+                                            <li>Call out ownership areas — debugging, automation, migrations, or team
+                                                processes
+                                                you
+                                                drove.</li>
+                                            <li>Add any cross-functional work: mentoring, open source, or tooling that
+                                                improved
+                                                delivery.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="proj-tech">Tech: React, Framer Motion, CSS Modules</div>
+                                </div> -->
+                            </div>
+                            <div class="proj-card">
+                                <div class="proj-card-title">
+                                    Connect Kisan
+                                    <a href="https://connectkisan.com/en" target="_blank">
+                                        View Live ↗
+                                    </a>
+                                </div>
+
+                                <div class="proj-card-list">
+                                    <ul>
+                                        <li>Developed a notification management module to create, schedule, and deliver
+                                            announcements, alerts, and updates to farmers and stakeholders.</li>
+
+                                        <!-- <li>Implemented role-based notification delivery, enabling targeted communication based on user roles, municipalities, and application events.</li>
+
+            <li>Built a configurable notification workflow supporting real-time and scheduled push notifications to improve user engagement and information dissemination.</li> -->
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="proj-tech">
+                                    Tech: Next.js, React.js, Node.js,GraphQL, REST APIs, PostgreSQL
+                                </div>
+
+                            </div>
+                            <div class="proj-card">
+                                <div class="proj-card-title">
+                                    Syanko POS
+                                    <a href="https://syanko-test.dashboard.cliffbyte.com/en" target="_blank">
+                                        View Live ↗
+                                    </a>
+                                </div>
+
+                                <div class="proj-card-list">
+                                    <ul>
+                                        <li>Developed a comprehensive Point of Sale (POS) system for restaurants,
+                                            enabling efficient order management, billing, and payment processing.</li>
+
+                                        <li>Implemented a Kitchen Order Ticket (KOT) module that instantly routes
+                                            customer orders to the kitchen, improving communication and reducing order
+                                            preparation time.</li>
+
+                                        <li>Built an automated bill generation and thermal receipt printing module with
+                                            support for itemized bills, taxes, discounts, and multiple payment methods.
+                                        </li>
+
+                                        <!-- <li>Developed reusable REST APIs and optimized order-processing workflows to ensure reliable, real-time synchronization between POS terminals and kitchen operations.</li>
+       -->
+                                    </ul>
+                                </div>
+
+                                <div class="proj-tech">
+                                    Tech: React.js, Node.js, REST APIs, PostgreSQL
+                                </div>
+
+
+                                
+                            </div>
+<div class="proj-card">
+                    <div class="proj-card-title">
+                        Dwarika Engineering — Interactive Company Website
+                        <a href="https://dwarikaengineering.com/" target="_blank">View Live ↗</a>
+                    </div>
+                    <div class="proj-card-list">
+                        <ul>
+                            <li>Designed and developed an immersive company website with a modern visual identity and responsive user experience.</li>
+                            <li>Implemented scroll-driven animations, smooth page transitions, and interactive UI details to create an engaging browsing experience.</li>
+                            <li>Built 3D visual experiences and motion-led sections optimized for performance across desktop and mobile devices.</li>
+                        </ul>
+                    </div>
+                    <div class="proj-tech">Tech: Next.js, GSAP, Framer Motion, Three.js, React Three Fiber, Lenis</div>
+                </div>
+                            <h2>Relevant Projects</h2>
+                            <div class="rel-proj-grid">
+                                <div class="rel-proj-card">
+                                    <div class="rel-proj-header">
+                                        <span class="rel-proj-title">Redpanda Hotel</span>
+                                        <span class="rel-proj-link"><a href="https://pandanest.vercel.app/"
+                                                target="_blank">Link
+                                                ↗</a></span>
+                                    </div>
+                                    <div class="rel-proj-desc">Specialized hospitality platform with room reservation
+                                        and
+                                        custom
+                                        checkout flows for the local market.</div>
+                                </div>
+
+                                <div class="rel-proj-card">
+                                    <div class="rel-proj-header">
+                                        <span class="rel-proj-title">Dynamic CV Maker</span>
+                                        <span class="rel-proj-link"><a href="https://cv.dhakalkiran.com.np/"
+                                                target="_blank">Link
+                                                ↗</a></span>
+                                    </div>
+                                    <div class="rel-proj-desc">ATS-friendly resume generator with real-time preview and
+                                        dynamic
+                                        styling
+                                        via React state management.</div>
+                                </div>
+
+                                <div class="rel-proj-card">
+                                    <div class="rel-proj-header">
+                                        <span class="rel-proj-title">PMS SaaS Tool</span>
+                                        <span class="rel-proj-link"><a href="https://pms.dhakalkiran.com.np/"
+                                                target="_blank">Link
+                                                ↗</a></span>
+                                    </div>
+                                    <div class="rel-proj-desc">Collaborative tool for dev teams featuring RBAC and
+                                        real-time
+                                        sprint
+                                        tracking for agile workflows.</div>
+                                </div>
+
+                                <div class="rel-proj-card">
+                                    <div class="rel-proj-header">
+                                        <span class="rel-proj-title">Food Delivery AI</span>
+                                        <span class="rel-proj-link"><a href="https://fooddelivery-ten-ebon.vercel.app/"
+                                                target="_blank">Link ↗</a></span>
+                                    </div>
+                                    <div class="rel-proj-desc">Ordering platform using collaborative filtering to
+                                        deliver
+                                        personalized
+                                        product suggestions to users.</div>
+                                </div>
+                            </div>
+
+                            <section class="education">
+                                <h2>Education</h2>
+                                <div class="edu-item">
+                                    <div class="edu-row">
+                                        <span class="edu-degree">Bachelor of Computer Engineering</span>
+                                        <span class="edu-date">2020 – 2025</span>
+                                    </div>
+                                    <div class="edu-school">Gandaki College of Engineering and Science, Pokhara</div>
+                                </div>
+                                <div class="edu-item">
+                                    <div class="edu-row">
+                                        <span class="edu-degree">Secondary Education</span>
+                                        <span class="edu-date">2013 – 2020</span>
+                                    </div>
+                                    <div class="edu-school">Shree Shiva Secondary School</div>
+                                </div>
+                            </section>
+
+
+
+                            <h2>Additional</h2>
+                            <div class="additional-row"><span class="bold">Languages:</span> English (Professional),
+                                Nepali
+                                (Native),
+                                Hindi (Professional)</div>
+                            <div class="additional-row"><span class="bold">Interests:</span> Strategic Chess, Open
+                                Source
+                                Development,
+                                Emerging Web Technologies</div>
+                        </div>
+                    </div>
+
+</body>
+
+</html>
