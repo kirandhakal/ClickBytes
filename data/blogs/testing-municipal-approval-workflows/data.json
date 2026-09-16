@@ -10,7 +10,7 @@
     {
       "title": "Start with a transition map",
       "paragraphs": [
-        "My work on Dhangadhi Service Bus included routing applications between municipal roles. That development context suggests a useful testing question: what must remain true when ownership changes? This article proposes tests; it does not describe an executed production audit.",
+        "Dhangadhi Service Bus includes applications routed between municipal roles. That domain suggests a useful testing question: what must remain true when ownership changes? This article proposes tests; it does not describe an executed production audit.",
         "List each state, the actor allowed to move it, the required documents, and the side effects. Forwarding, sending back, approving, and rejecting are separate transitions with different preconditions. Confirm the actual rules with the product team before creating expected results."
       ]
     },
@@ -36,13 +36,13 @@
       "title": "Choose release evidence",
       "paragraphs": [
         "For this exercise I would prioritize unauthorized transitions, lost applications, and inconsistent decisions. A release summary should state which roles and transitions were covered, what remains blocked, and what was not tested. A green list of button clicks cannot substitute for that coverage.",
-        "Information Care’s articles supplied the broader civic-service and data-protection context. The fixtures, scenarios, and QA interpretation here are original proposals based on my development background."
+        "Information Care’s articles supplied the broader civic-service and data-protection context. The fixtures, scenarios, and QA interpretation here are original testing proposals."
       ]
     }
   ],
   "sources": [
     {
-      "label": "Development experience — Kiran Dhakal’s CV",
+      "label": "QA CV — Kiran Dhakal",
       "href": "/images/assets/cv.html"
     },
     {

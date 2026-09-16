@@ -1,7 +1,7 @@
 {
   "slug": "testing-pos-retries-and-totals",
   "title": "One order, one charge: designing POS regression tests",
-  "excerpt": "An original QA exercise based on Syanko POS development: totals, kitchen tickets, payment ambiguity, and receipt retries.",
+  "excerpt": "An original QA exercise for Syanko POS: totals, kitchen tickets, payment ambiguity, and receipt retries.",
   "category": "Transaction testing",
   "publishedAt": "2026-09-16",
   "readingTime": "3 min read",
@@ -10,7 +10,7 @@
     {
       "title": "Agree on the arithmetic first",
       "paragraphs": [
-        "My Syanko POS development work covered orders, kitchen tickets, billing, taxes, discounts, and receipts. Testing that chain begins with explicit pricing rules. This article proposes a regression strategy; it does not claim that these defects were found in the product.",
+        "Syanko POS covers orders, kitchen tickets, billing, taxes, discounts, and receipts. Testing that chain begins with explicit pricing rules. This article proposes a regression strategy; it does not claim that these defects were found in the product.",
         "For an illustrative rule, two items cost 250 each, a 10% discount applies before a 13% tax, and rounding happens once at the end. The expected total is 508.50. This is synthetic test data, not a statement of the product’s actual tax policy. Agree on the real rule before using any numeric oracle."
       ]
     },
@@ -43,7 +43,7 @@
   ],
   "sources": [
     {
-      "label": "Development experience — Kiran Dhakal’s CV",
+      "label": "QA CV — Kiran Dhakal",
       "href": "/images/assets/cv.html"
     }
   ]

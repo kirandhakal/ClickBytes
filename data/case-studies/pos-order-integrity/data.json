@@ -6,9 +6,9 @@
   "service": "Portfolio test-design study",
   "sections": [
     {
-      "title": "My development contribution",
+      "title": "QA context from my CV",
       "paragraphs": [
-        "My CV lists development of order management, kitchen order tickets, automated bills, taxes, discounts, multiple payment methods, and thermal receipts using React, Node.js, REST APIs, and PostgreSQL."
+        "My CV lists product exposure to order management, kitchen order tickets, automated bills, taxes, discounts, multiple payment methods, and thermal receipts. This study converts that domain into QA coverage for one order, one bill, one payment state, and one receipt trail."
       ]
     },
     {
@@ -37,7 +37,7 @@
   ],
   "sources": [
     {
-      "label": "Development experience — Kiran Dhakal’s CV",
+      "label": "QA CV — Kiran Dhakal",
       "href": "/images/assets/cv.html"
     }
   ]

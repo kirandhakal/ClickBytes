@@ -249,11 +249,11 @@ body:has(.hero-section) { background: #f5f3ec; color: #17211f; }
 .skill-icon svg { width: 19px; }
 .skill-card h3 { margin-top: 2rem; font-family: Georgia, serif; font-size: 1.3rem; font-weight: 400; }
 .skill-card p { margin-top: .55rem; color: #93a39d; font-size: .72rem; }
-.developer-strip { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; margin-top: 3rem; padding: 1.4rem; border: 1px solid #3b4a45; }
-.developer-strip > span { display: flex; align-items: center; gap: .6rem; color: #dfff54; font-size: .68rem; font-weight: 800; text-transform: uppercase; }
-.developer-strip svg { width: 17px; }
-.developer-strip > div { display: flex; flex-wrap: wrap; gap: .5rem; }
-.developer-strip > div span { padding: .4rem .6rem; border: 1px solid #41524c; color: #c5d1cd; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .58rem; }
+.qa-strip { display: grid; grid-template-columns: 220px 1fr; gap: 2rem; margin-top: 3rem; padding: 1.4rem; border: 1px solid #3b4a45; }
+.qa-strip > span { display: flex; align-items: center; gap: .6rem; color: #dfff54; font-size: .68rem; font-weight: 800; text-transform: uppercase; }
+.qa-strip svg { width: 17px; }
+.qa-strip > div { display: flex; flex-wrap: wrap; gap: .5rem; }
+.qa-strip > div span { padding: .4rem .6rem; border: 1px solid #41524c; color: #c5d1cd; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .58rem; }
 
 .work-section { background: #fffef9; }
 .dark-heading > p { color: #66736e; }
@@ -335,7 +335,7 @@ body:has(.hero-section) { background: #f5f3ec; color: #17211f; }
   .about-facts { gap: .6rem; }
   .about-facts strong { font-size: 2rem; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .developer-strip { grid-template-columns: 1fr; }
+  .qa-strip { grid-template-columns: 1fr; }
   .project-row { grid-template-columns: 34px 1fr 40px; }
   .coverage-list { grid-column: 2 / -1; }
   .project-link { grid-column: 3; grid-row: 1; }

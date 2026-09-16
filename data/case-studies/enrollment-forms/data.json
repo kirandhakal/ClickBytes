@@ -6,9 +6,9 @@
   "service": "Portfolio test-design study",
   "sections": [
     {
-      "title": "My development contribution",
+      "title": "QA context from my CV",
       "paragraphs": [
-        "My CV records a drag-and-drop form builder, configurable intakes, course selection, application workflows, offer letters, and installment management. The stack includes Next.js, Node.js, REST APIs, and PostgreSQL."
+        "My CV records product exposure to configurable form fields, intakes, course selection, application workflows, offer letters, and installment management. This study treats configuration, saved data, reviewer decisions, and generated documents as testable quality risks."
       ]
     },
     {
@@ -37,7 +37,7 @@
   ],
   "sources": [
     {
-      "label": "Development experience — Kiran Dhakal’s CV",
+      "label": "QA CV — Kiran Dhakal",
       "href": "/images/assets/cv.html"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "slug": "testing-dynamic-enrollment-forms",
   "title": "A dynamic form is more than its visible fields",
-  "excerpt": "A proposed test strategy for configurable enrollment forms, inspired by my development work on Vibe College.",
+  "excerpt": "A proposed QA strategy for configurable enrollment forms, inspired by Vibe College domain flows.",
   "category": "Test design",
   "publishedAt": "2026-09-16",
   "readingTime": "3 min read",
@@ -10,7 +10,7 @@
     {
       "title": "The configuration is part of the input",
       "paragraphs": [
-        "At Vibe College I developed configurable forms, intakes, course selection, and review workflows. A test plan for this kind of product should cover both administrator configuration and the student’s resulting experience. This is a proposed testing approach, not a claim of measured QA results.",
+        "Vibe College includes configurable forms, intakes, course selection, and review workflows. A test plan for this kind of product should cover both administrator configuration and the student’s resulting experience. This is a proposed testing approach, not a claim of measured QA results.",
         "Begin with one intake, one course, and one conditional field. Record the schema version and business rules. Changing the configuration can change the meaning of a saved application even when its visible values stay the same."
       ]
     },
@@ -43,7 +43,7 @@
   ],
   "sources": [
     {
-      "label": "Development experience — Kiran Dhakal’s CV",
+      "label": "QA CV — Kiran Dhakal",
       "href": "/images/assets/cv.html"
     },
     {

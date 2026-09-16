@@ -6,9 +6,9 @@
   "service": "Portfolio test-design study",
   "sections": [
     {
-      "title": "My development contribution",
+      "title": "QA context from my CV",
       "paragraphs": [
-        "The CV documents my work on e-KYC, migration, recommendations, appointments, workflow routing, payments, document management, and notifications using Next.js, NestJS, GraphQL, and PostgreSQL."
+        "The CV documents product exposure to e-KYC, migration, recommendations, appointments, workflow routing, payments, document management, and notifications. This study turns that domain into a QA plan for roles, states, documents, and side effects."
       ]
     },
     {
@@ -37,7 +37,7 @@
   ],
   "sources": [
     {
-      "label": "Development experience — Kiran Dhakal’s CV",
+      "label": "QA CV — Kiran Dhakal",
       "href": "/images/assets/cv.html"
     }
   ]
