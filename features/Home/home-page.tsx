@@ -10,6 +10,13 @@ export function HomeFeature() {
       <div className="container hero-shell">
         <div className="hero-copy motion-reveal">
           <p className="eyebrow"><span className="status-pulse" />{data.eyebrow}</p>
+          <div className="hero-ticker" aria-label="QA focus areas">
+            <div className="ticker-track">
+              {data.ticker.map((item) => (
+                <span key={item}><CircleCheck aria-hidden="true" />{item}</span>
+              ))}
+            </div>
+          </div>
           <h1>{data.title}<span>{data.accent}</span></h1>
           <p className="hero-lead">{data.description}</p>
           <div className="hero-actions">
@@ -23,13 +30,6 @@ export function HomeFeature() {
             <div className="profile-photo-wrap"><Image src={data.portrait.src} alt={data.portrait.alt} width={256} height={339} preload className="profile-photo" /><span className="photo-label">{data.portrait.label}</span></div>
             <div className="profile-result"><div><strong>{data.portrait.caption}</strong><span>{data.portrait.detail}</span></div></div>
           </div>
-        </div>
-      </div>
-      <div className="hero-ticker" aria-label="QA focus areas">
-        <div className="ticker-track">
-          {[...data.ticker, ...data.ticker].map((item, index) => (
-            <span key={`${item}-${index}`}><CircleCheck aria-hidden="true" />{item}</span>
-          ))}
         </div>
       </div>
     </section>
