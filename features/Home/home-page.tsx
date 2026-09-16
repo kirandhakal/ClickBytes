@@ -10,13 +10,13 @@ export function HomeFeature() {
       <div className="container hero-shell">
         <div className="hero-copy motion-reveal">
           <p className="eyebrow"><span className="status-pulse" />{data.eyebrow}</p>
-          <div className="hero-ticker" aria-label="QA focus areas">
+          {/* <div className="hero-ticker" aria-label="QA focus areas">
             <div className="ticker-track">
               {data.ticker.map((item) => (
                 <span key={item}><CircleCheck aria-hidden="true" />{item}</span>
               ))}
             </div>
-          </div>
+          </div> */}
           <h1>{data.title}<span>{data.accent}</span></h1>
           <p className="hero-lead">{data.description}</p>
           <div className="hero-actions">
