@@ -1,29 +1,37 @@
 const fallbackUrl = "http://localhost:3000";
 
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME ?? "Universal Starter",
+  name: process.env.NEXT_PUBLIC_SITE_NAME ?? "Kiran Dhakal — Software Quality Assurance Engineer",
+  shortName: "Kiran Dhakal",
   description:
-    "A frontend-first Next.js starter with accessible components, design tokens, animation, dark mode, and production-ready SEO.",
+    "QA portfolio of Kiran Dhakal, a software quality assurance engineer in Kathmandu with a full-stack development background in manual testing, API validation, test design, and defect analysis.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? fallbackUrl,
   locale: "en_US",
-  creator: "Your team",
+  creator: "Kiran Dhakal",
+  email: "kirandhakal715@gmail.com",
+  location: "Kathmandu, Nepal",
   keywords: [
-    "Next.js starter",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "shadcn/ui",
+    "Kiran Dhakal",
+    "software quality assurance engineer",
+    "SQA engineer Nepal",
+    "QA engineer Kathmandu",
+    "manual testing",
+    "API testing",
+    "software tester Nepal",
+    "test case design",
+    "quality assurance portfolio",
+    "QA engineer with developer background",
   ],
   links: {
-    github: "https://github.com/your-org/your-project",
+    github: "https://github.com/kirandhakal",
+    linkedin: "https://linkedin.com/in/kirandhakal7",
   },
 } as const;
 
 export const navigation = [
-  { label: "Components", href: "/#components" },
-  { label: "States", href: "/#states" },
-  { label: "Motion", href: "/#motion" },
-  { label: "Blog", href: "/blogs" },
-  { label: "Case studies", href: "/case-studies" },
-  { label: "Patterns", href: "/patterns" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/#process" },
 ] as const;
+
