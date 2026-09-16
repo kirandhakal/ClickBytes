@@ -1,26 +1,26 @@
 {
   "eyebrow": "01 / About",
-  "title": "A builder’s perspective on software quality.",
-  "description": "I’m Kiran Dhakal, a computer engineer in Kathmandu transitioning from full-stack development into software quality assurance.",
+  "title": "A focused software quality assurance profile.",
+  "description": "I’m Kiran Dhakal, a QA/SQA engineer in Kathmandu focused on software testing, defect analysis, API validation, and dependable releases.",
   "sections": [
     {
-      "title": "From development to QA",
+      "title": "QA focus",
       "paragraphs": [
-        "My CV reflects 2+ years of full-stack development across municipal services, education, retail, and content management. That experience helps me connect what users see with APIs, databases, and business rules.",
-        "The testing approaches on this site are portfolio exercises informed by my development work, rather than claims of previous QA employment."
+        "My CV is now positioned for QA/SQA roles: manual testing, exploratory testing, test case design, API checks, data validation, defect reporting, and regression planning.",
+        "I focus on whether a feature behaves correctly for the user, protects data, handles edge cases, and leaves enough evidence for a confident release decision."
       ]
     },
     {
       "title": "Information Care Pvt. Ltd.",
       "paragraphs": [
-        "My development contributions include Dhangadhi Service Bus, Hello Palika, Vibe College, CTF School Management, Chiurika, Connect Kisan, Syanko POS, and Dwarika Engineering. I have worked on configurable workflows, forms, notifications, payments, reporting, and responsive interfaces."
+        "The product domains in my CV include Dhangadhi Service Bus, Hello Palika, Vibe College, CTF School Management, Chiurika, Connect Kisan, Syanko POS, and Dwarika Engineering. They give me practical QA context around workflows, forms, notifications, payments, reporting, and responsive user interfaces."
       ]
     },
     {
       "title": "Education & interests",
       "paragraphs": [
         "Bachelor of Computer Engineering, Gandaki College of Engineering and Science, Pokhara — 2020–2025, as listed in my CV.",
-        "I speak Nepali, English, and Hindi. I enjoy strategic chess, open-source development, and exploring web technologies."
+        "I speak Nepali, English, and Hindi. I enjoy strategic chess, learning testing tools, writing better bug reports, and studying how real users move through software."
       ]
     }
   ],

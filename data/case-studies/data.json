@@ -1,7 +1,7 @@
 {
   "eyebrow": "07 / Case studies",
-  "title": "Real projects. A deliberate QA perspective.",
-  "description": "Test-design studies grounded in my development contributions. Scenarios and release criteria are proposed; no test executions or measured improvements are claimed.",
+  "title": "Software testing case studies.",
+  "description": "QA case studies covering workflow testing, form validation, POS order integrity, API checks, data consistency, and release criteria.",
   "sections": [],
   "links": [],
   "readLabel": "Explore study",

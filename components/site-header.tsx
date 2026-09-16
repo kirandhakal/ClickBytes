@@ -14,7 +14,7 @@ export function SiteHeader() {
       <span className="brand-mark">{data.mark}</span><span><strong>{data.name}</strong><small>{data.tagline}</small></span>
     </Link>
     <nav className="desktop-nav" aria-label={data.navigationLabel}>
-      {data.navigation.map(item => <Link key={item.href} href={item.href} aria-current={active(item.href) ? "page" : undefined}>{item.label}</Link>)}
+      {data.navigation.map(item => <Link key={item.href} href={item.href} aria-current={active(item.href) ? "page" : undefined}><span>{item.label}</span></Link>)}
     </nav>
     <Link className="header-cta" href={data.contactHref}>{data.contactLabel} ↗</Link>
     <div className="mobile-menu">

@@ -6,7 +6,7 @@ export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME ?? "Kiran Dhakal — Software Quality Assurance Engineer",
   shortName: "Kiran Dhakal",
   description:
-    "QA portfolio of Kiran Dhakal, a software quality assurance engineer in Kathmandu with a full-stack development background in manual testing, API validation, test design, and defect analysis.",
+    "QA portfolio of Kiran Dhakal, a software quality assurance engineer in Kathmandu focused on manual testing, API validation, test case design, defect reporting, regression planning, and release evidence.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? fallbackUrl,
   locale: "en_US",
   creator: "Kiran Dhakal",
@@ -22,7 +22,7 @@ export const siteConfig = {
     "software tester Nepal",
     "test case design",
     "quality assurance portfolio",
-    "QA engineer with developer background",
+    "software quality assurance portfolio",
   ],
   links: {
     github: "https://github.com/kirandhakal",

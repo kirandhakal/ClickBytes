@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
           <span>Kiran Dhakal</span>
           <span style={{ color: "#087f5b", fontStyle: "italic" }}>I test like a builder.</span>
         </div>
-        <div style={{ display: "flex", fontSize: 25, lineHeight: 1.4, marginTop: 38 }}>Developer insight · User empathy · Quality mindset</div>
+        <div style={{ display: "flex", fontSize: 25, lineHeight: 1.4, marginTop: 38 }}>Manual testing · API validation · Defect reporting · Release evidence</div>
       </div>
     </div>,
     size,

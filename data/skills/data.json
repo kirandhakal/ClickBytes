@@ -1,34 +1,34 @@
 {
   "eyebrow": "02 / Skills",
-  "title": "Technical context. A growing QA toolkit.",
-  "description": "My engineering foundation supports a transition into manual testing, test design, API validation, and defect investigation.",
+  "title": "Software testing skills and QA tools.",
+  "description": "A QA-focused skill set covering manual testing, test design, API validation, database checks, defect reporting, and automation basics.",
   "sections": [
     {
-      "title": "Testing focus",
+      "title": "Manual and functional testing",
       "paragraphs": [
-        "I’m developing a structured approach to testing: identify goals, map rules, select representative inputs, and record reproducible observations."
+        "I use a structured approach to testing: understand the requirement, map business rules, select representative inputs, execute carefully, and record reproducible observations."
       ],
       "items": [
         "Functional and exploratory testing",
         "Positive, negative, boundary, and state-transition scenarios",
-        "API permissions and persisted data validation",
+        "API validation and persisted data checks",
         "Defect reproduction and regression planning"
       ]
     },
     {
-      "title": "Engineering foundation from my CV",
+      "title": "QA tools and technical checks",
       "items": [
-        "JavaScript, TypeScript, Python",
-        "React, Next.js, Tailwind CSS, Redux",
-        "Node.js, NestJS, REST APIs, GraphQL",
-        "PostgreSQL, MongoDB",
-        "Git, Docker, Linux, n8n, AWS, DigitalOcean"
+        "Postman for API request checks, response validation, and negative cases",
+        "Selenium, Cypress, and Playwright basics for browser automation practice",
+        "SQL, PostgreSQL, and MongoDB checks for data correctness",
+        "Chrome DevTools for network, console, storage, and UI investigation",
+        "Git, Docker, and Linux familiarity for test environments and collaboration"
       ]
     },
     {
-      "title": "How that helps a QA team",
+      "title": "How I support a QA team",
       "paragraphs": [
-        "Knowing how a form becomes an API request helps me investigate whether a failure begins in validation, transport, business logic, or persistence. Understanding workflows helps me identify transitions that should be allowed and those that must be rejected."
+        "I can investigate issues across the browser, API response, and stored data, then report the smallest reliable reproduction path. My goal is to make each defect clear enough for fast triage and each retest clear enough for release confidence."
       ]
     }
   ],

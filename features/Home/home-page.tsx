@@ -1,3 +1,4 @@
+import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import data from "@/data/home/data.json";
@@ -22,6 +23,13 @@ export function HomeFeature() {
             <div className="profile-photo-wrap"><Image src={data.portrait.src} alt={data.portrait.alt} width={256} height={339} preload className="profile-photo" /><span className="photo-label">{data.portrait.label}</span></div>
             <div className="profile-result"><div><strong>{data.portrait.caption}</strong><span>{data.portrait.detail}</span></div></div>
           </div>
+        </div>
+      </div>
+      <div className="hero-ticker" aria-label="QA focus areas">
+        <div className="ticker-track">
+          {[...data.ticker, ...data.ticker].map((item, index) => (
+            <span key={`${item}-${index}`}><CircleCheck aria-hidden="true" />{item}</span>
+          ))}
         </div>
       </div>
     </section>

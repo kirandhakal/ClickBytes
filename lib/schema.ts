@@ -31,7 +31,8 @@ export function personSchema() {
       "API testing",
       "Test case design",
       "Defect reporting",
-      "Web application development",
+      "Regression testing",
+      "Software testing",
     ],
   };
 }

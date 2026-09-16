@@ -15,16 +15,8 @@
       "href": "/about"
     },
     {
-      "label": "Skills",
+      "label": "QA Skills",
       "href": "/skills"
-    },
-    {
-      "label": "Work",
-      "href": "/work"
-    },
-    {
-      "label": "Process",
-      "href": "/process"
     },
     {
       "label": "Case studies",
@@ -35,7 +27,7 @@
       "href": "/blogs"
     },
     {
-      "label": "QA tools",
+      "label": "Tools",
       "href": "/tools"
     }
   ],

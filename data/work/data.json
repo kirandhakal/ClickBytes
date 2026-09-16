@@ -1,56 +1,56 @@
 {
-  "eyebrow": "03 / Product experience",
-  "title": "Systems I know from the inside.",
-  "description": "Development contributions drawn from my CV, with the testing questions each product motivates.",
+  "eyebrow": "03 / QA work areas",
+  "title": "Product domains translated into QA coverage.",
+  "description": "Systems from my CV reframed around software testing risks, coverage areas, and release evidence.",
   "sections": [
     {
       "title": "Dhangadhi Service Bus",
       "paragraphs": [
-        "Developed municipal service workflows covering e-KYC, migration, recommendations, appointments, payments, Darta and Chalani, and notifications."
+        "Municipal service workflows covering e-KYC, migration, recommendations, appointments, payments, Darta and Chalani, and notifications."
       ],
       "items": [
-        "Next.js, NestJS, GraphQL, PostgreSQL",
-        "QA lens: permission boundaries, document integrity, workflow transitions, and payment states"
+        "QA coverage: role permissions, document integrity, workflow transitions, notification targeting, and payment states",
+        "Testing value: protect citizen data and prevent inconsistent service decisions"
       ],
       "href": "/case-studies/view-details/municipal-workflow"
     },
     {
       "title": "Vibe College",
       "paragraphs": [
-        "Developed dynamic enrollment forms, intake configuration, course selection, offer letters, fee installments, and application review."
+        "Dynamic enrollment forms, intake configuration, course selection, offer letters, fee installments, and application review."
       ],
       "items": [
-        "Next.js, Node.js, REST APIs, PostgreSQL",
-        "QA lens: conditional validation, draft recovery, and approval consistency"
+        "QA coverage: conditional validation, draft recovery, file rules, reviewer actions, and offer-letter consistency",
+        "Testing value: keep applicant data complete, correct, and recoverable"
       ],
       "href": "/case-studies/view-details/enrollment-forms"
     },
     {
       "title": "Syanko POS",
       "paragraphs": [
-        "Developed order management, kitchen tickets, billing, taxes, discounts, payment processing, and thermal receipts."
+        "Order management, kitchen tickets, billing, taxes, discounts, payment processing, and thermal receipts."
       ],
       "items": [
-        "React, Node.js, REST APIs, PostgreSQL",
-        "QA lens: duplicate submissions, totals, kitchen synchronization, and receipt retries"
+        "QA coverage: duplicate submissions, totals, discounts, tax calculation, kitchen synchronization, payment ambiguity, and receipt retries",
+        "Testing value: reduce billing mistakes and keep kitchen/order state aligned"
       ],
       "href": "/case-studies/view-details/pos-order-integrity"
     },
     {
-      "title": "More product experience",
+      "title": "More QA coverage areas",
       "items": [
         "Hello Palika: citizen communication, appointments, complaints, decisions, and notifications",
         "CTF School Management: report cards, grades, rankings, and attendance summaries",
-        "Chiurika: eCommerce CMS and GraphQL content integration",
+        "Chiurika: eCommerce CMS content, product data, and publishing checks",
         "Connect Kisan: creating, scheduling, and delivering notifications",
-        "Dwarika Engineering: responsive website with motion and 3D experiences",
-        "Personal projects: Redpanda Hotel, Dynamic CV Maker, PMS SaaS Tool, and Food Delivery AI"
+        "Dwarika Engineering: responsive UI, motion behavior, page performance, and browser checks",
+        "Personal projects: booking flows, CV generation, property management flows, and food ordering scenarios"
       ]
     }
   ],
   "links": [
     {
-      "label": "Full development CV",
+      "label": "View QA CV",
       "href": "/images/assets/cv.html"
     }
   ]

@@ -1,14 +1,14 @@
 {
-  "eyebrow": "Developer → Software quality assurance",
-  "title": "I test software",
-  "accent": "like someone who built it.",
-  "description": "I’m Kiran Dhakal, a computer engineer in Kathmandu bringing 2+ years of full-stack development experience into a career in software quality assurance.",
+  "eyebrow": "Software quality assurance",
+  "title": "Software quality assurance",
+  "accent": "with practical testing discipline.",
+  "description": "I’m Kiran Dhakal, a QA/SQA engineer in Kathmandu focused on manual testing, automation basics, API validation, defect reporting, regression planning, and reliable release evidence.",
   "primary": {
-    "label": "Explore my work",
+    "label": "Explore QA work",
     "href": "/work"
   },
   "secondary": {
-    "label": "View development CV",
+    "label": "View QA CV",
     "href": "/images/assets/cv.html"
   },
   "portrait": {
@@ -17,45 +17,55 @@
     "label": "KIRAN DHAKAL / QA PORTFOLIO",
     "file": "candidate_profile.qa",
     "status": "OPEN TO QA ROLES",
-    "caption": "Developer insight. Testing curiosity.",
-    "detail": "From building workflows to examining their edge cases."
+    "caption": "Quality mindset. Clear evidence.",
+    "detail": "Testing workflows, APIs, data, and release risks."
   },
+  "ticker": [
+    "Manual testing",
+    "Functional testing",
+    "Regression testing",
+    "API validation",
+    "Exploratory testing",
+    "Bug reporting",
+    "Test case design",
+    "UAT support"
+  ],
   "directoryTitle": "Explore the portfolio",
-  "directoryDescription": "The background, thinking, and practical exercises behind my transition into QA.",
+  "directoryDescription": "QA-focused pages covering my profile, testing skills, case studies, writing, and tools.",
   "pages": [
     {
       "title": "About",
-      "description": "I’m Kiran Dhakal, a computer engineer in Kathmandu transitioning from full-stack development into software quality assurance.",
+      "description": "My QA profile, current focus, education, languages, and contact context.",
       "href": "/about"
     },
     {
       "title": "Skills",
-      "description": "My engineering foundation supports a transition into manual testing, test design, API validation, and defect investigation.",
+      "description": "Manual testing, test design, API checks, database validation, bug reporting, and regression planning.",
       "href": "/skills"
     },
     {
-      "title": "Work",
-      "description": "Development contributions drawn from my CV, with the testing questions each product motivates.",
+      "title": "QA work",
+      "description": "Product domains from my CV reframed as QA coverage areas and release risks.",
       "href": "/work"
     },
     {
       "title": "Process",
-      "description": "My proposed process for identifying risk, designing coverage, and communicating what a release still needs.",
+      "description": "How I move from requirements to test cases, evidence, defect reports, and retesting.",
       "href": "/process"
     },
     {
       "title": "Contact",
-      "description": "I’m exploring SQA opportunities where curiosity, communication, and engineering context help a team deliver reliable software.",
+      "description": "Reach me for QA/SQA opportunities, software testing roles, and quality-focused collaboration.",
       "href": "/contact"
     },
     {
       "title": "QA blog",
-      "description": "Original QA articles inspired by systems in my development CV. These are proposed methods and illustrative examples, not reports of verified production defects.",
+      "description": "Original QA articles about municipal workflows, enrollment forms, and POS testing.",
       "href": "/blogs"
     },
     {
       "title": "Case studies",
-      "description": "Test-design studies grounded in my development contributions. Scenarios and release criteria are proposed; no test executions or measured improvements are claimed.",
+      "description": "QA case studies covering workflows, forms, POS orders, data integrity, and release criteria.",
       "href": "/case-studies"
     },
     {
