@@ -10,8 +10,8 @@ export default function OpenGraphImage() {
     <div
       style={{
         alignItems: "center",
-        background: "#f7f8f6",
-        color: "#18202d",
+        background: "#f5f3ec",
+        color: "#17211f",
         display: "flex",
         height: "100%",
         justifyContent: "center",
@@ -19,10 +19,13 @@ export default function OpenGraphImage() {
         width: "100%",
       }}
     >
-      <div style={{ display: "flex", flexDirection: "column", maxWidth: "980px" }}>
-        <div style={{ color: "#2875bd", display: "flex", fontSize: 26, fontWeight: 700, marginBottom: 28 }}>NEXT.JS FRONTEND FOUNDATION</div>
-        <div style={{ display: "flex", fontSize: 74, fontWeight: 800, lineHeight: 1.05 }}>{siteConfig.name}</div>
-        <div style={{ color: "#596374", display: "flex", fontSize: 30, lineHeight: 1.4, marginTop: 30 }}>{siteConfig.description}</div>
+      <div style={{ display: "flex", flexDirection: "column", maxWidth: "1020px" }}>
+        <div style={{ color: "#087f5b", display: "flex", fontSize: 24, fontWeight: 700, letterSpacing: 3, marginBottom: 32 }}>SOFTWARE QUALITY ASSURANCE · KATHMANDU</div>
+        <div style={{ display: "flex", flexDirection: "column", fontFamily: "serif", fontSize: 86, lineHeight: .98 }}>
+          <span>Kiran Dhakal</span>
+          <span style={{ color: "#087f5b", fontStyle: "italic" }}>I test like a builder.</span>
+        </div>
+        <div style={{ display: "flex", fontSize: 25, lineHeight: 1.4, marginTop: 38 }}>Developer insight · User empathy · Quality mindset</div>
       </div>
     </div>,
     size,

@@ -34,4 +34,3 @@ export const navigation = [
   { label: "Work", href: "/#work" },
   { label: "Process", href: "/#process" },
 ] as const;
-

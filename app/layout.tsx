@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/context/theme-context";
 import { ToastProvider } from "@/components/ui/overlays";
 import { createMetadata } from "@/lib/metadata";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { personSchema, websiteSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -16,15 +16,12 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.creator }],
   creator: siteConfig.creator,
-  category: "technology",
+  category: "portfolio",
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light dark",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fcfcfb" },
-    { media: "(prefers-color-scheme: dark)", color: "#17191e" },
-  ],
+  colorScheme: "light",
+  themeColor: "#087f5b",
 };
 
 const themeScript = `
@@ -47,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <SiteFooter />
           </ToastProvider>
         </ThemeProvider>
-        <SchemaOrg data={[organizationSchema(), websiteSchema()]} />
+        <SchemaOrg data={[personSchema(), websiteSchema()]} />
       </body>
     </html>
   );

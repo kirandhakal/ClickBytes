@@ -10,6 +10,32 @@ export function organizationSchema() {
   };
 }
 
+export function personSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: siteConfig.creator,
+    url: siteConfig.url,
+    image: absoluteUrl("/images/assets/kirandhakal.webp"),
+    email: `mailto:${siteConfig.email}`,
+    jobTitle: "Software Quality Assurance Engineer",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Kathmandu",
+      addressCountry: "NP",
+    },
+    sameAs: [siteConfig.links.linkedin, siteConfig.links.github],
+    knowsAbout: [
+      "Software quality assurance",
+      "Manual testing",
+      "API testing",
+      "Test case design",
+      "Defect reporting",
+      "Web application development",
+    ],
+  };
+}
+
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
