@@ -1,7 +1,4 @@
-export type CaseStudyMetric = {
-  value: string;
-  label: string;
-};
+import type { ContentLink, ContentSection } from "./content";
 
 export type CaseStudy = {
   slug: string;
@@ -12,4 +9,3 @@ export type CaseStudy = {
   sections: ContentSection[];
   sources: ContentLink[];
 };
-import type { ContentLink, ContentSection } from "./content";

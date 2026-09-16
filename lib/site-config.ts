@@ -1,3 +1,5 @@
+import site from "@/data/site/data.json";
+
 const fallbackUrl = "http://localhost:3000";
 
 export const siteConfig = {
@@ -29,4 +31,3 @@ export const siteConfig = {
 } as const;
 
 export const navigation = site.navigation;
-import site from "@/data/site/data.json";
