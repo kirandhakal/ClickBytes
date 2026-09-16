@@ -13,4 +13,7 @@ export type CaseStudy = {
   solution: string;
   outcome: string;
   metrics: CaseStudyMetric[];
+  sections: ContentSection[];
+  sources: ContentLink[];
 };
+import type { ContentLink, ContentSection } from "./content";

@@ -1,0 +1,57 @@
+{
+  "eyebrow": "03 / Product experience",
+  "title": "Systems I know from the inside.",
+  "description": "Development contributions drawn from my CV, with the testing questions each product motivates.",
+  "sections": [
+    {
+      "title": "Dhangadhi Service Bus",
+      "paragraphs": [
+        "Developed municipal service workflows covering e-KYC, migration, recommendations, appointments, payments, Darta and Chalani, and notifications."
+      ],
+      "items": [
+        "Next.js, NestJS, GraphQL, PostgreSQL",
+        "QA lens: permission boundaries, document integrity, workflow transitions, and payment states"
+      ],
+      "href": "/case-studies/view-details/municipal-workflow"
+    },
+    {
+      "title": "Vibe College",
+      "paragraphs": [
+        "Developed dynamic enrollment forms, intake configuration, course selection, offer letters, fee installments, and application review."
+      ],
+      "items": [
+        "Next.js, Node.js, REST APIs, PostgreSQL",
+        "QA lens: conditional validation, draft recovery, and approval consistency"
+      ],
+      "href": "/case-studies/view-details/enrollment-forms"
+    },
+    {
+      "title": "Syanko POS",
+      "paragraphs": [
+        "Developed order management, kitchen tickets, billing, taxes, discounts, payment processing, and thermal receipts."
+      ],
+      "items": [
+        "React, Node.js, REST APIs, PostgreSQL",
+        "QA lens: duplicate submissions, totals, kitchen synchronization, and receipt retries"
+      ],
+      "href": "/case-studies/view-details/pos-order-integrity"
+    },
+    {
+      "title": "More product experience",
+      "items": [
+        "Hello Palika: citizen communication, appointments, complaints, decisions, and notifications",
+        "CTF School Management: report cards, grades, rankings, and attendance summaries",
+        "Chiurika: eCommerce CMS and GraphQL content integration",
+        "Connect Kisan: creating, scheduling, and delivering notifications",
+        "Dwarika Engineering: responsive website with motion and 3D experiences",
+        "Personal projects: Redpanda Hotel, Dynamic CV Maker, PMS SaaS Tool, and Food Delivery AI"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Full development CV",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

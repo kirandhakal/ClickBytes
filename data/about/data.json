@@ -1,0 +1,37 @@
+{
+  "eyebrow": "01 / About",
+  "title": "A builder’s perspective on software quality.",
+  "description": "I’m Kiran Dhakal, a computer engineer in Kathmandu transitioning from full-stack development into software quality assurance.",
+  "sections": [
+    {
+      "title": "From development to QA",
+      "paragraphs": [
+        "My CV reflects 2+ years of full-stack development across municipal services, education, retail, and content management. That experience helps me connect what users see with APIs, databases, and business rules.",
+        "The testing approaches on this site are portfolio exercises informed by my development work, rather than claims of previous QA employment."
+      ]
+    },
+    {
+      "title": "Information Care Pvt. Ltd.",
+      "paragraphs": [
+        "My development contributions include Dhangadhi Service Bus, Hello Palika, Vibe College, CTF School Management, Chiurika, Connect Kisan, Syanko POS, and Dwarika Engineering. I have worked on configurable workflows, forms, notifications, payments, reporting, and responsive interfaces."
+      ]
+    },
+    {
+      "title": "Education & interests",
+      "paragraphs": [
+        "Bachelor of Computer Engineering, Gandaki College of Engineering and Science, Pokhara — 2020–2025, as listed in my CV.",
+        "I speak Nepali, English, and Hindi. I enjoy strategic chess, open-source development, and exploring web technologies."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Read my CV",
+      "href": "/images/assets/cv.html"
+    },
+    {
+      "label": "Product experience",
+      "href": "/work"
+    }
+  ]
+}

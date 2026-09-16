@@ -1,0 +1,31 @@
+{
+  "eyebrow": "05 / Contact",
+  "title": "Let’s make software more dependable.",
+  "description": "I’m exploring SQA opportunities where curiosity, communication, and engineering context help a team deliver reliable software.",
+  "sections": [
+    {
+      "title": "Kathmandu, Nepal",
+      "paragraphs": [
+        "Reach out about a QA role, a project, or my transition into software testing. My CV includes my development experience and education."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "kirandhakal715@gmail.com",
+      "href": "mailto:kirandhakal715@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/kirandhakal7"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/kirandhakal"
+    },
+    {
+      "label": "View CV",
+      "href": "/images/assets/cv.html"
+    }
+  ]
+}

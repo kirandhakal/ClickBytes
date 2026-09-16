@@ -1,0 +1,42 @@
+{
+  "eyebrow": "04 / Test approach",
+  "title": "From requirements to useful evidence.",
+  "description": "My proposed process for identifying risk, designing coverage, and communicating what a release still needs.",
+  "sections": [
+    {
+      "title": "01 — Understand the product",
+      "paragraphs": [
+        "Identify users, goals, and the cost of failure. Clarify acceptance criteria and ambiguous rules before treating them as test expectations."
+      ]
+    },
+    {
+      "title": "02 — Design coverage",
+      "paragraphs": [
+        "Map the normal journey, then vary roles, inputs, states, and dependencies. Prioritize private data, transaction integrity, and blocked user journeys."
+      ],
+      "items": [
+        "Record preconditions and representative data",
+        "Use boundary values and invalid input classes",
+        "Include interrupted requests and repeated actions"
+      ]
+    },
+    {
+      "title": "03 — Execute & investigate",
+      "paragraphs": [
+        "Compare observations with agreed expectations. Inspect interface behavior, API responses, and persisted records where access permits. Record the environment and build with the evidence."
+      ]
+    },
+    {
+      "title": "04 — Report & retest",
+      "paragraphs": [
+        "Explain impact with minimal reproduction steps. After a fix, repeat the failing case and nearby scenarios. Document untested areas and remaining risks before a release decision."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Build a test case",
+      "href": "/tools"
+    }
+  ]
+}

@@ -1,44 +1,166 @@
 [
   {
-    "slug": "designing-a-scalable-frontend",
-    "title": "Designing a frontend that can grow",
-    "excerpt": "A practical way to separate routes, features, shared components, and content before a project becomes difficult to change.",
-    "category": "Architecture",
-    "publishedAt": "2026-08-18",
-    "readingTime": "6 min read",
-    "author": "Starter Team",
-    "content": [
-      "A scalable frontend is less about having many folders and more about giving each kind of code a predictable home. Routes should describe URLs and compose screens. Features should own domain-specific sections, while shared components stay unaware of individual pages.",
-      "Keeping content in typed data files is useful for prototypes and content-driven sites. It gives teams a CMS-like boundary without introducing infrastructure too early, and the same types can later describe API responses.",
-      "The best starter is intentionally ordinary. It establishes accessibility, responsive layout, metadata, and error states once, then stays out of the way as the product develops."
+    "slug": "testing-municipal-approval-workflows",
+    "title": "Test the handoff, not just the approval button",
+    "excerpt": "A QA design exercise for municipal services: follow one application across roles, retries, and state changes.",
+    "category": "E-governance QA",
+    "publishedAt": "2026-09-16",
+    "readingTime": "3 min read",
+    "author": "Kiran Dhakal",
+    "content": [],
+    "sections": [
+      {
+        "title": "Start with a transition map",
+        "paragraphs": [
+          "My work on Dhangadhi Service Bus included routing applications between municipal roles. That development context suggests a useful testing question: what must remain true when ownership changes? This article proposes tests; it does not describe an executed production audit.",
+          "List each state, the actor allowed to move it, the required documents, and the side effects. Forwarding, sending back, approving, and rejecting are separate transitions with different preconditions. Confirm the actual rules with the product team before creating expected results."
+        ]
+      },
+      {
+        "title": "Use a small, explicit permission matrix",
+        "paragraphs": [
+          "For an illustrative fixture, create a citizen, a reviewing officer, and an approver. Give each a separate test account. Check the same application through each account, including direct API requests in an authorized test environment. A hidden button alone does not establish that the operation is protected."
+        ],
+        "items": [
+          "Citizen attempts an officer-only transition: reject it and preserve state.",
+          "Reviewer sends an application back: record the reason and notify the correct owner.",
+          "A second officer acts on an outdated screen: reject or reconcile the stale change according to the agreed rule."
+        ]
+      },
+      {
+        "title": "Follow the side effects",
+        "paragraphs": [
+          "After a transition, inspect the status, assignee, audit entry, and notification together. If the browser reports a timeout, fetch the application again before deciding the operation failed. A retry must not create a second decision or deliver an unrelated notification.",
+          "Evidence should include the starting state, account role, request identifier, resulting state, and observation time. Use synthetic records and redact tokens from attachments. A report becomes actionable when another engineer can replay the exact transition."
+        ]
+      },
+      {
+        "title": "Choose release evidence",
+        "paragraphs": [
+          "For this exercise I would prioritize unauthorized transitions, lost applications, and inconsistent decisions. A release summary should state which roles and transitions were covered, what remains blocked, and what was not tested. A green list of button clicks cannot substitute for that coverage.",
+          "Information Care’s articles supplied the broader civic-service and data-protection context. The fixtures, scenarios, and QA interpretation here are original proposals based on my development background."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Development experience — Kiran Dhakal’s CV",
+        "href": "/images/assets/cv.html"
+      },
+      {
+        "label": "Information Care: digital government context",
+        "href": "https://infocarenepal.com/blogs/view-details/digital-transformation-for-local-governments-complete-guide-smart-municipalities"
+      },
+      {
+        "label": "Information Care: government platform security context",
+        "href": "https://infocarenepal.com/blogs/view-details/cybersecurity-best-practices-for-government-digital-platforms"
+      }
     ]
   },
   {
-    "slug": "seo-with-the-app-router",
-    "title": "Practical SEO with the App Router",
-    "excerpt": "Build canonical metadata, social previews, structured data, robots rules, and sitemaps into the project foundation.",
-    "category": "SEO",
-    "publishedAt": "2026-08-27",
-    "readingTime": "5 min read",
-    "author": "Starter Team",
-    "content": [
-      "SEO works best as part of route composition instead of a final checklist. Static pages can export metadata directly, while dynamic routes can create metadata from the same record used to render the page.",
-      "Canonical URLs prevent ambiguity, Open Graph metadata improves link previews, and structured data gives crawlers explicit information about the page. Each one solves a different problem, so a complete starter includes all three.",
-      "Sitemaps should be generated from the same source as route params. This prevents published detail pages from quietly disappearing from discovery when content changes."
+    "slug": "testing-dynamic-enrollment-forms",
+    "title": "A dynamic form is more than its visible fields",
+    "excerpt": "A proposed test strategy for configurable enrollment forms, inspired by my development work on Vibe College.",
+    "category": "Test design",
+    "publishedAt": "2026-09-16",
+    "readingTime": "3 min read",
+    "author": "Kiran Dhakal",
+    "content": [],
+    "sections": [
+      {
+        "title": "The configuration is part of the input",
+        "paragraphs": [
+          "At Vibe College I developed configurable forms, intakes, course selection, and review workflows. A test plan for this kind of product should cover both administrator configuration and the student’s resulting experience. This is a proposed testing approach, not a claim of measured QA results.",
+          "Begin with one intake, one course, and one conditional field. Record the schema version and business rules. Changing the configuration can change the meaning of a saved application even when its visible values stay the same."
+        ]
+      },
+      {
+        "title": "Design a boundary fixture",
+        "paragraphs": [
+          "Suppose an illustrative intake allows an attachment up to 5 MB. First agree whether that means 5,000,000 or 5,242,880 bytes, and which file types are accepted. Then test just below, at, and above the limit. Use an actual file of the required size instead of changing only its name."
+        ],
+        "items": [
+          "Required field: omitted, whitespace only, valid value.",
+          "Conditional field: show it, fill it, hide it again, then inspect the submitted payload.",
+          "Saved draft: reopen after a schema change and check the agreed migration behavior.",
+          "Repeated submit: verify that one accepted application is created."
+        ]
+      },
+      {
+        "title": "Check beyond the success message",
+        "paragraphs": [
+          "A success message proves only that the interface displayed one. Compare the persisted record with the submitted data and verify that the reviewer sees the same course and intake. Confirm the approved application is the one used for the offer letter.",
+          "Test a timeout after the server accepts submission. On retry, the user should have a clear path to their existing application. Document the expected behavior before treating duplicate prevention as a pass criterion."
+        ]
+      },
+      {
+        "title": "Make a compact regression pack",
+        "paragraphs": [
+          "Keep a representative valid submission, a rejected boundary input, a draft recovery, and one full approval-to-letter journey. Add cases when configuration changes introduce new branches. Keep test data independent so one failed scenario does not invalidate the rest.",
+          "The same focus on dependable citizen-facing services discussed by Information Care applies here at a domain level: completing an online form should lead to a traceable outcome. The enrollment examples in this article come from my CV and my own QA design exercise."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Development experience — Kiran Dhakal’s CV",
+        "href": "/images/assets/cv.html"
+      },
+      {
+        "label": "Information Care: digital government context",
+        "href": "https://infocarenepal.com/blogs/view-details/digital-transformation-for-local-governments-complete-guide-smart-municipalities"
+      }
     ]
   },
   {
-    "slug": "motion-with-restraint",
-    "title": "Using motion with restraint",
-    "excerpt": "Small animation primitives can improve hierarchy and feedback without turning a product interface into a presentation.",
-    "category": "Interaction",
-    "publishedAt": "2026-09-04",
-    "readingTime": "4 min read",
-    "author": "Starter Team",
-    "content": [
-      "Interface motion should clarify what changed, where an element came from, or whether an action succeeded. When animation has no communicative purpose, it quickly becomes visual noise.",
-      "A small set of fade, slide, scale, stagger, and hover primitives covers most product needs. Keeping these effects local makes them easy to replace and keeps feature components readable.",
-      "Reduced-motion support is not an optional enhancement. Animation utilities should respect the system preference automatically so every feature gets the correct behavior by default."
+    "slug": "testing-pos-retries-and-totals",
+    "title": "One order, one charge: designing POS regression tests",
+    "excerpt": "An original QA exercise based on Syanko POS development: totals, kitchen tickets, payment ambiguity, and receipt retries.",
+    "category": "Transaction testing",
+    "publishedAt": "2026-09-16",
+    "readingTime": "3 min read",
+    "author": "Kiran Dhakal",
+    "content": [],
+    "sections": [
+      {
+        "title": "Agree on the arithmetic first",
+        "paragraphs": [
+          "My Syanko POS development work covered orders, kitchen tickets, billing, taxes, discounts, and receipts. Testing that chain begins with explicit pricing rules. This article proposes a regression strategy; it does not claim that these defects were found in the product.",
+          "For an illustrative rule, two items cost 250 each, a 10% discount applies before a 13% tax, and rounding happens once at the end. The expected total is 508.50. This is synthetic test data, not a statement of the product’s actual tax policy. Agree on the real rule before using any numeric oracle."
+        ]
+      },
+      {
+        "title": "Treat retries as normal inputs",
+        "paragraphs": [
+          "A slow response leaves the cashier uncertain about whether an order was accepted. Test a repeated action after a timeout and inspect stored orders, payment references, and kitchen tickets. Define which identifier binds each attempt to the same operation."
+        ],
+        "items": [
+          "Double click submit: inspect whether it creates duplicate accepted orders.",
+          "Payment response is delayed: inspect pending state before retrying.",
+          "Printer fails after payment: retry the receipt without creating another charge.",
+          "Item changes after kitchen dispatch: verify the agreed amendment flow."
+        ]
+      },
+      {
+        "title": "Compare three representations",
+        "paragraphs": [
+          "Use the order record, kitchen ticket, and receipt as separate observations. Compare item identifiers, quantity, modifiers, and totals. A correct receipt can conceal an incorrect kitchen ticket, so a single screenshot is insufficient evidence.",
+          "For each run, record the environment, order identifier, initial data, action sequence, and final records. Keep expected totals independent of the application’s calculation so the test does not reproduce the same mistake."
+        ]
+      },
+      {
+        "title": "Report uncertainty honestly",
+        "paragraphs": [
+          "A proposed regression pack should include normal checkout, a discount boundary, a timeout, and a receipt retry. Test execution and observations must still be collected before claiming the workflow is reliable.",
+          "If a payment simulator cannot reproduce a delayed callback, mark that case blocked. The useful release summary distinguishes passed scenarios, failed scenarios, blocked checks, and untested integrations."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Development experience — Kiran Dhakal’s CV",
+        "href": "/images/assets/cv.html"
+      }
     ]
   }
 ]

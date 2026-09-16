@@ -1,0 +1,41 @@
+{
+  "eyebrow": "02 / Skills",
+  "title": "Technical context. A growing QA toolkit.",
+  "description": "My engineering foundation supports a transition into manual testing, test design, API validation, and defect investigation.",
+  "sections": [
+    {
+      "title": "Testing focus",
+      "paragraphs": [
+        "I’m developing a structured approach to testing: identify goals, map rules, select representative inputs, and record reproducible observations."
+      ],
+      "items": [
+        "Functional and exploratory testing",
+        "Positive, negative, boundary, and state-transition scenarios",
+        "API permissions and persisted data validation",
+        "Defect reproduction and regression planning"
+      ]
+    },
+    {
+      "title": "Engineering foundation from my CV",
+      "items": [
+        "JavaScript, TypeScript, Python",
+        "React, Next.js, Tailwind CSS, Redux",
+        "Node.js, NestJS, REST APIs, GraphQL",
+        "PostgreSQL, MongoDB",
+        "Git, Docker, Linux, n8n, AWS, DigitalOcean"
+      ]
+    },
+    {
+      "title": "How that helps a QA team",
+      "paragraphs": [
+        "Knowing how a form becomes an API request helps me investigate whether a failure begins in validation, transport, business logic, or persistence. Understanding workflows helps me identify transitions that should be allowed and those that must be rejected."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "My testing approach",
+      "href": "/process"
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import type { ContentLink, ContentSection } from "./content";
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -7,4 +9,6 @@ export type BlogPost = {
   readingTime: string;
   author: string;
   content: string[];
+  sections: ContentSection[];
+  sources: ContentLink[];
 };
